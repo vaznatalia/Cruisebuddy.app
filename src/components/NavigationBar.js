@@ -1,24 +1,37 @@
 import React from 'react';
-import { Nav, Navbar,Button,Form,FormControl} from 'react-bootstrap';
-
-
-
 
 export const NavigationBar = () => (
-  <Nav className="header-hero">
-  <Navbar className="mx-5" bg="navbar hidden navbar   fixed-top" expand="lg">
-    <Navbar.Brand href="#home">Cruise Buddy</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse expand="lg" id="basic-navbar-nav">
-      <Nav className="mx-auto">
-      <Nav.Link className="mx-5" href="#home">About</Nav.Link>
-        <Nav.Link className="mx-5" href="#home">Find a Cruise</Nav.Link>
-        <Nav.Link className="mx-5" href="#link">Log in/Register</Nav.Link>
-        <Button className="mx-5" variant="outline-light">Write a Review</Button>
-      </Nav>    
-    </Navbar.Collapse>
-  </Navbar>
-  </Nav>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#">Cruise Buddy</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav text-uppercase ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" >FIND A CRUISE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">LOGIN/REGISTER</a>
+         </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">Team</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#">Write a Review</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  
+  
  
   
 
