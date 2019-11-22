@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // import pages
@@ -12,7 +11,7 @@ import Ship from './pages/Ship'
 import About from './pages/About'
 
 // import components
-import Navbar from './components/Navbar'
+import {NavigationBar} from './components/NavigationBar'
 
 // import CSS
 
@@ -27,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-      <Navbar/>
+      <NavigationBar/>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/search" component={Search} />  

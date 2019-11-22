@@ -1,0 +1,14 @@
+.hero-div {
+  text-align: center;
+  color: white;
+  background-image: url("../images/heroImage.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  width: 80rem;
+  height: 80rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
