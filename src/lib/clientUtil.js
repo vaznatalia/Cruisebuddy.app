@@ -3,38 +3,23 @@ const zip = (...[first, ...arrays]) =>
   first.map((value, i) =>
     arrays.reduce((acc, array) => [...acc, array[i]], [value])
   );
-const BASEURL = "http://zip.thruhere.net:3001",
-  endpoints = Array.from(
-    new Set([
-      "/authenticate",
-      "/comments",
-      "/comments",
-      "/cruise_lines",
-      "/cruise_lines",
-      "/helpfuls",
-      "/helpfuls",
-      "/itineraries",
-      "/itineraries",
-      "/port_images",
-      "/port_images",
-      "/ports",
-      "/ports",
-      "/regions",
-      "/regions",
-      "/reviews",
-      "/reviews",
-      "/ship_images",
-      "/ship_images",
-      "/ships",
-      "/ships",
-      "/user_profiles",
-      "/user_profiles",
-      "/voyage_ports",
-      "/voyage_ports",
-      "/voyages",
-      "/voyages"
-    ])
-  )
+const BASEURL = "http://localhost:3000", //&& "http://zip.thruhere.net:3001",
+  endpoints = [
+    "/authenticate",
+    "/comments",
+    "/cruise_lines",
+    "/helpfuls",
+    "/itineraries",
+    "/port_images",
+    "/ports",
+    "/regions",
+    "/reviews",
+    "/ship_images",
+    "/ships",
+    "/user_profiles",
+    "/voyage_ports",
+    "/voyages"
+  ]
     .map(path => `${BASEURL}${path}`)
     .sort(),
   // Must define an ENDPOINTS object.
