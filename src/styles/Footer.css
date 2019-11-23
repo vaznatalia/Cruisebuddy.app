@@ -1,5 +1,9 @@
-.footer {	
-  height: 241px;	
-  width: 1440px;
-  background-color: #BFEBFF
-  }
+
+.container-footer{	
+height: 241px;	
+width: 1440px;
+background-color: #BFEBFF;
+display: block;
+margin-top:50rem ;
+
+}
