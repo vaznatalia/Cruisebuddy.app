@@ -1,0 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.search-nav-container {
+  background-color: #064164;
+  height: 64px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+
+}
+.search-filters {
+  text-align:center;
+
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 200px;
+}
+
+
+button, input, optgroup, select, textarea {
+  margin: 15px;
+}
+
+.search-sort-container{
+  margin-top: 20px;
+  display:flex;
+  justify-content: space-between;
+}
+
+.search-sort{
+  font-family: 'lato', sans-serif;  
+  font-size: 14px;
+  font-color: #4E555B;
+}

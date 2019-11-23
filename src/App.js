@@ -1,18 +1,16 @@
+
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { setDataFrom, ENDPOINTS } from "./lib/clientUtil.js";
-import Footer from './pages/Footer'
-// import libraries
 
 // import pages
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import About from "./pages/About";
-
 import Ships from "./Ships";
-
+import Footer from './pages/Footer'
 
 // import components
 import {NavigationBar} from './components/NavigationBar'
@@ -44,9 +42,11 @@ class App extends Component {
       </>
     );
   }
+
   componentDidMount() {
     setDataFrom(this.k_cruise_lines, ENDPOINTS[this.k_cruise_lines], this)
     setDataFrom(this.k_ship, ENDPOINTS[this.k_ship], this);
   }
 }
+
 export default App;
