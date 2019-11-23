@@ -1,8 +1,8 @@
 // import libraries
-
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 // import pages
 import Home from "./pages/Home";
@@ -12,8 +12,9 @@ import About from "./pages/About";
 
 import Ships from "./Ships";
 
+
 // import components
-import Navbar from "./components/Navbar";
+import {NavigationBar} from './components/NavigationBar'
 
 // import CSS
 
@@ -39,6 +40,7 @@ class App extends Component {
         <Ships />
       </>
     );
+
   }
 }
 
