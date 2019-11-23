@@ -1,10 +1,11 @@
 import React from "react"
-import '../styles/home.css'
+import '../styles/Footer.css'
+import {Container} from 'react-bootstrap'
 
-class Footer  = () => (
-   <Footer classname="footer">
+const Footer = () => (
+   <Container className="container-footer">
+      <h1>Cruisebuddy</h1>
 
-   </Footer> 
-)
-
-export default Footer
+   </Container>
+   )
+   export default Footer

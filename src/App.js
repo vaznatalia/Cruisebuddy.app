@@ -2,15 +2,23 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { setDataFrom, ENDPOINTS } from "./lib/clientUtil.js";
+import Footer from './pages/Footer'
+// import libraries
+
 // import pages
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import About from "./pages/About";
-// need to impor the utility file
+
+import Ships from "./Ships";
+
+
 // import components
-import {NavigationBar} from "./components/NavigationBar";
+import {NavigationBar} from './components/NavigationBar'
+
 // import CSS
+
 import "./styles/global.css";
 import "./styles/home.css";
 import "./styles/search.css";
@@ -31,6 +39,7 @@ class App extends Component {
             <Route path="/ship/:id" component={Ship} />
             <Route exact path="/about" component={About} />
           </Switch>
+          <Footer/>
         </BrowserRouter>
       </>
     );

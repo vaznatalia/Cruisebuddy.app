@@ -1,5 +1,8 @@
-.footer {	
+.container-footer{	
 height: 241px;	
 width: 1440px;
-background-color: #BFEBFF
+background-color: #BFEBFF;
+display: block;
+margin-top:50rem ;
+
 }
