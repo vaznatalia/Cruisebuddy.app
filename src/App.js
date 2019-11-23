@@ -10,8 +10,8 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import About from "./pages/About";
+import Ships from "./Ships";
 
-// need to import the utility file
 
 // import components
 import {NavigationBar} from './components/NavigationBar'
@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <NavigationBar/>
+          <NavigationBar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/search" component={Search} />
