@@ -1,10 +1,10 @@
 import React from "react"
 import '../styles/home.css'
 
-class Footer  = () => (
+class Footer = () => (
    <Footer classname="footer">
 
    </Footer> 
 )
 
-export default Footer
+export default Footer 
