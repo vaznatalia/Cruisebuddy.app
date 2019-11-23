@@ -1,12 +1,11 @@
 import React from "react"
 import '../styles/home.css'
 import { DropdownButton, Dropdown, Jumbotron,  Container} from 'react-bootstrap'
-import { NavigationBar } from "../components/NavigationBar"
 
 
 const Home = () => (
-  <Jumbotron  className="hero-div">
-  <NavigationBar />
+  <div  className="hero-div">
+
   <Container className="container-fluid" >
   <DropdownButton  variant="light" id="dropdown-basic-button" title="Any destination">
   <Dropdown.Item className="column" href="#/action-1">Action</Dropdown.Item>
@@ -31,7 +30,7 @@ const Home = () => (
 </DropdownButton>
 
     </Container>
-  </Jumbotron>
+  </div>
 
 )
 
