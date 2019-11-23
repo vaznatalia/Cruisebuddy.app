@@ -3,9 +3,9 @@ import '../styles/Footer.css'
 import {Container} from 'react-bootstrap'
 
 const Footer = () => (
-   <Container className="container-footer">
+   <div className="container-footer">
       <h1>Cruisebuddy</h1>
 
-   </Container>
+   </div>
    )
    export default Footer
