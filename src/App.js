@@ -9,7 +9,6 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import About from "./pages/About";
-
 import Ships from "./Ships";
 
 
@@ -29,7 +28,7 @@ class App extends Component {
     return (
       <>
         <BrowserRouter>
-          <Navbar />
+          <NavigationBar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/search" component={Search} />
@@ -37,7 +36,6 @@ class App extends Component {
             <Route exact path="/about" component={About} />
           </Switch>
         </BrowserRouter>
-        <Ships />
       </>
     );
 
