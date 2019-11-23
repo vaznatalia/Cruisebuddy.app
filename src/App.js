@@ -10,8 +10,11 @@ import Search from './pages/Search'
 import Ship from './pages/Ship'
 import About from './pages/About'
 
+
 // import components
 import {NavigationBar} from './components/NavigationBar'
+
+
 
 // import CSS
 
@@ -29,6 +32,7 @@ class App extends Component {
       <NavigationBar/>
       <Switch>
         <Route exact path="/" component={Home}/>
+      
         <Route exact path="/search" component={Search} />  
         <Route path="/ship/:id" component={Ship} />
         <Route exact path="/about" component={About} />      

@@ -1,33 +1,38 @@
 import React from "react"
 import '../styles/home.css'
-import { Card, Button} from 'react-bootstrap'
+import { DropdownButton, Dropdown, Jumbotron,  Container} from 'react-bootstrap'
+import { NavigationBar } from "../components/NavigationBar"
+
 
 const Home = () => (
-  <div>
- <div className="hero-div">
+  <Jumbotron  className="hero-div">
+  <NavigationBar />
+  <Container className="container-fluid" >
+  <DropdownButton  variant="light" id="dropdown-basic-button" title="Any destination">
+  <Dropdown.Item className="column" href="#/action-1">Action</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+</DropdownButton>
+<DropdownButton  variant="light" id="dropdown-basic-button" title="Any port">
+  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+</DropdownButton>
+<DropdownButton variant="light"  id="dropdown-basic-button" title="Any Date">
+  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+</DropdownButton>
 
-   <div class="container h-100">
-      <div class="d-flex justify-content-center h-100">
-        <div class="searchbar">
-          <input class="search_input" type="text" name="" placeholder="Search..."/>
-          <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-        </div>
-      </div>
-    </div>
+    </Container>
+  </Jumbotron>
 
-    </div>
-    <Card style={{ width: '18rem' }}>
-    <Card.Img variant="top" src="holder.js/100px180" />
-    <Card.Body>
-      <Card.Title>Card Title</Card.Title>
-      <Card.Text>
-        Some quick example text to build on the card title and make up the bulk of
-        the card's content.
-      </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
-    </Card.Body>
-  </Card>
-  </div>
 )
 
 export default Home
