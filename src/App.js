@@ -1,8 +1,9 @@
 // import libraries
+
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { setDataFrom, ENDPOINTS } from "./lib/clientUtil.js";
 
 // import pages
 import Home from "./pages/Home";
@@ -24,6 +25,9 @@ import "./styles/ship.css";
 import "./styles/about.css";
 
 class App extends Component {
+  k_cruise_lines = 'cruise_lines'
+  k_ship = "ships"
+  state = {[this.k_ship] : []}
   render() {
     return (
       <>
@@ -38,7 +42,11 @@ class App extends Component {
         </BrowserRouter>
       </>
     );
+  }
 
+  componentDidMount() {
+    setDataFrom(this.k_cruise_lines, ENDPOINTS[this.k_cruise_lines], this)
+    setDataFrom(this.k_ship, ENDPOINTS[this.k_ship], this);
   }
 }
 
