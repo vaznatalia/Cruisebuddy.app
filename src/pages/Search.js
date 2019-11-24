@@ -1,18 +1,45 @@
-import React from "react"
+import React, { Component } from "react"
+import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Search extends React.Component {
-  state = {
-          }
+class Search extends Component {
+  state = { ships: [] }
 
- 
+  componentDidMount() {
+    this.fetchShips()
+  }
 
- 
+  fetchShips = async () => {
+    const { data } = await axios.get(
+      'http://localhost:4000/ships',
+      { 'Content-Type': 'application/json', Authorization: sessionStorage.getItem('AUTH_TOKEN') }
+    )
+    this.setState({ ships: this.filterShipsByTerm(data.ships) })
+  }
+
+  filterShipsByTerm = ships => {
+    const { match } = this.props;
+    const searchTerm = match.params.searchTerm || '';
+    return ships.filter(ship => ship.reviews.some(({ body = '' }) => body.toLowerCase().includes(searchTerm.toLowerCase())))
+  }
 
   render(){
+    const { ships } = this.state
     return(
       <>
       {/* nav */}
+      {ships.map(ship => (
+        <div>
+          <h1>{ship.name}</h1>
+          <p>Reviews</p>
+          <ul>
+            {ship.reviews.map(({ body }) => (
+              <li>{body}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
       <div className="search-nav-container"></div>
       <div className="container">
         <div className="search-filters">
@@ -85,4 +112,4 @@ class Search extends React.Component {
 
 }
 
-export default Search
+export default withRouter(Search)

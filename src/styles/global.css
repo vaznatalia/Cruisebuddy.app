@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400i&display=swap');
+
+.navbar-brand {	
+  height: 23px;	
+  width: 111px;	
+  color: #000000;	
+  font-family: 'lato', sans-serif; 
+  font-style: italic;
+  font-size: 20px;	
+  line-height: 23px;}

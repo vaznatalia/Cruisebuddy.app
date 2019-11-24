@@ -13,8 +13,6 @@ export const NavigationBar = () => (
       <Nav class="navbar-nav text-uppercase ml-auto">
         <Nav.Link className="nav-link js-scroll-trigger" >FIND A CRUISE</Nav.Link>
           <Nav.Link className="nav-link js-scroll-trigger" href="#">LOGIN/REGISTER</Nav.Link>
-          <Nav.Link className="nav-link js-scroll-trigger" href="#">About</Nav.Link>
-          <Nav.Link className="nav-link js-scroll-trigger" href="#">Team</Nav.Link>
           <Button variant="outline-light">Write a Review</Button>
       </Nav>
     </Navbar.Collapse>

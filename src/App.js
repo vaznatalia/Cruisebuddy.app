@@ -22,18 +22,22 @@ import "./styles/home.css";
 import "./styles/search.css";
 import "./styles/ship.css";
 import "./styles/about.css";
+
+const k_cruise_lines = 'cruise_lines'
+const k_ship = "ships"
+
+
 class App extends Component {
-  k_cruise_lines = 'cruise_lines'
-  k_ship = "ships"
-  state = {[this.k_ship] : []}
+  state = { ship: []}
   render() {
+    const { ships } = this.state;
     return (
       <>
         <BrowserRouter>
           <NavigationBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/search" component={Search} />
+            <Route exact path="/search/:searchTerm?" render={() => <Search ships={ships} />} />
             <Route path="/ship/:id" component={Ship} />
             <Route exact path="/about" component={About} />
           </Switch>
@@ -44,8 +48,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    setDataFrom(this.k_cruise_lines, ENDPOINTS[this.k_cruise_lines], this)
-    setDataFrom(this.k_ship, ENDPOINTS[this.k_ship], this);
+    setDataFrom(k_cruise_lines, ENDPOINTS[k_cruise_lines], this)
+    setDataFrom(k_ship, ENDPOINTS[k_ship], this);
   }
 }
 
