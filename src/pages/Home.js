@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import { NavigationBar } from "../components/NavigationBar"
 import '../styles/home.css'
 
+
 class Home extends Component {
   state = { query: '', destination: '', port: '' }
 
