@@ -1,16 +1,13 @@
 .hero-div {
   text-align: center;
   color: white;
-  background-image: url("../images/heroImage.jpg");
+  background-image: url("../images/heroImage2.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: 50% 50%;
   background-size: cover;
-  width: 1440px;
-  height: 944px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  height: 800px;
   padding: 5rem;
 
 }
