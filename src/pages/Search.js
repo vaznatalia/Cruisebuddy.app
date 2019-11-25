@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Search extends Component {
@@ -28,18 +29,6 @@ class Search extends Component {
     const { ships } = this.state
     return(
       <>
-      {/* nav */}
-      {ships.map(ship => (
-        <div>
-          <h1>{ship.name}</h1>
-          <p>Reviews</p>
-          <ul>
-            {ship.reviews.map(({ body }) => (
-              <li>{body}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
       <div className="search-nav-container"></div>
       <div className="container">
         <div className="search-filters">
@@ -88,22 +77,32 @@ class Search extends Component {
           <div className="search-sort">Showing 1-6 of 32 results</div>
         </div>
       </div>
-      <div className="search-results-container"></div>\
+      <div className="search-results-container"></div>
       <div className="container">
-        <div className="card mb-3">
-            <div className="row no-gutters">
-              <div className="col-md-4">
-                <img src="https://picsum.photos/id/159/383/255" className="card-img" alt="Ship Image" />
-              </div>
-              <div className="col-md-8">
-                <div className="card-body">
-                  <h5 className="card-title">Carnival Horizon</h5>
-                  <p className="card-text">The Horizon is Carnival’s newest entry into the premium cruise line.</p>
-                  <p className="card-text"><small class="text-muted">408 Reviews</small></p>
+        {ships.map(ship => (
+          <>
+          <Link to={`/ship/${ship.id}`}>
+            <div className="card mb-3">
+              <div className="row no-gutters">
+                <div className="col-md-4">
+                  <img src="https://loremflickr.com/300/300/ship" className="card-img" alt="Ship Image" />
                 </div>
+              <div className="col-md-8">
+                    <div className="card-body">
+                      <h5 className="card-title">{ship.cruise_name.name} {ship.name}</h5>
+                      <p className="card-text"><small class="text-muted">{ship.reviews.length} Reviews</small></p>
               </div>
+              <ul>
+                {ship.reviews.map(({ body }) => (
+                  <li>{body}</li>
+                ))}
+              </ul>
             </div>
+          </div>
         </div>
+        </Link>
+          </>
+        ))}
       </div>
       <div className="search-show-container"></div>
       </>
