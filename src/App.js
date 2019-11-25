@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { setDataFrom, ENDPOINTS } from "./lib/clientUtil.js";
 
 // import pages
 import Home from "./pages/Home";
@@ -47,10 +46,6 @@ class App extends Component {
     );
   }
 
-  componentDidMount() {
-    setDataFrom(k_cruise_lines, ENDPOINTS[k_cruise_lines], this)
-    setDataFrom(k_ship, ENDPOINTS[k_ship], this);
-  }
 }
 
 export default App;
