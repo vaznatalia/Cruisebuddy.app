@@ -1,0 +1,44 @@
+.gallery{
+width: 1440px;
+height: 480px;
+background-color: blue;
+}
+/* .div0{
+width: 812px;
+height: 480px;
+background-color: blue;
+
+}
+.parent {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-row-gap: 0px;
+background-color: 
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 2;
+width: 314px;
+height: 254px;
+background-color: blueviolet;
+}
+.div2 { grid-area: 2 / 1 / 3 / 2;
+width: 314px;
+height: 254px;
+background-color: brown;
+}
+
+.div3 { grid-area: 1 / 2 / 2 / 3;
+width: 314px;
+height: 254px;
+background-color: chartreuse;
+}
+.div4 { grid-area: 2 / 2 / 3 / 3;
+ width: 314px;
+height: 254px;
+background-color: darkgoldenrod;
+} */
+.text{
+    width: 427px;
+    height:256px;
+}

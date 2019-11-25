@@ -10,7 +10,7 @@ import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import About from "./pages/About";
 import Ships from "./Ships";
-import Footer from './pages/Footer'
+import Footer from './components/Footer'
 
 // import components
 import {NavigationBar} from './components/NavigationBar'
