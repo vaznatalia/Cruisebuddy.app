@@ -24,8 +24,20 @@ class Ship extends React.Component {
   render(){
     console.log(this.state)
     return (
-    <h1>Ship</h1>
-
+      <>
+      <div className="search-nav-container"></div>
+      <div className="ship-image-cont"> 
+        <div className="ship-image-cont-left"> 
+          <div className="ship-image" id="left-1"><img src="https://loremflickr.com/500/300" alt="ship"/></div>
+        </div>
+        <div className="ship-image-cont-right"> 
+          <div className="ship-image overlay" id="right-1"><img src="https://loremflickr.com/300/300" alt="ship" /></div>
+          <div className="ship-image overlay" id="right-2"><img src="https://loremflickr.com/300/300" alt="ship" /></div>
+          <div className="ship-image overlay" id="right-3"><img src="https://loremflickr.com/300/300" alt="ship" /></div>
+          <div className="ship-image overlay" id="right-4"><img src="https://loremflickr.com/300/300" alt="ship" /></div>
+        </div>
+      </div>
+      </>
     )
   }
 }

@@ -8,7 +8,6 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import About from "./pages/About";
-import Ships from "./Ships";
 import Footer from './pages/Footer'
 
 // import components
@@ -21,9 +20,6 @@ import "./styles/home.css";
 import "./styles/search.css";
 import "./styles/ship.css";
 import "./styles/about.css";
-
-const k_cruise_lines = 'cruise_lines'
-const k_ship = "ships"
 
 
 class App extends Component {
