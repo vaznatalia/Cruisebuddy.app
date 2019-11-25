@@ -85,7 +85,7 @@ class Search extends Component {
             <div className="card mb-3">
               <div className="row no-gutters">
                 <div className="col-md-4">
-                  <img src="https://loremflickr.com/300/300/ship" className="card-img" alt="Ship Image" />
+                  <img src="https://loremflickr.com/300/300/ship" className="card-img" alt="Ship" />
                 </div>
               <div className="col-md-8">
                     <div className="card-body">
