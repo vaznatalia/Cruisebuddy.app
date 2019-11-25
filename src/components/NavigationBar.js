@@ -3,7 +3,7 @@ import { Navbar,Nav, Button } from 'react-bootstrap';
 
 
 export const NavigationBar = () => (
-  <Navbar className="navbar navbar-dark" bg="dark" id="mainNav" >
+  <Navbar className="navbar navbar-dark"  id="mainNav" >
   <Nav class="container" >
     <Navbar.Brand className="navbar-brand js-scroll-trigger" href="#">Cruisebuddy</Navbar.Brand>
     <Navbar.Toggle className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

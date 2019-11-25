@@ -3,14 +3,11 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 class Search extends Component {
   state = { ships: [] }
-
   componentDidMount() {
     this.fetchShips()
   }
-
   fetchShips = async () => {
     const { data } = await axios.get(
       'http://localhost:4000/ships',
@@ -18,13 +15,11 @@ class Search extends Component {
     )
     this.setState({ ships: this.filterShipsByTerm(data.ships) })
   }
-
   filterShipsByTerm = ships => {
     const { match } = this.props;
     const searchTerm = match.params.searchTerm || '';
     return ships.filter(ship => ship.reviews.some(({ body = '' }) => body.toLowerCase().includes(searchTerm.toLowerCase())))
   }
-
   render(){
     const { ships } = this.state
     return(
@@ -68,7 +63,6 @@ class Search extends Component {
               </div>
             </div>
           </div>
-
         </div>
       </div>
       <div className="container">
@@ -108,7 +102,5 @@ class Search extends Component {
       </>
     )
   }
-
 }
-
 export default withRouter(Search)

@@ -20,14 +20,12 @@ class Ship extends React.Component {
     )
     this.setState({ship: data })
   }
-
-
-
   render(){
-    console.log(this.state)
+    console.log(this.state.data)
     return (
-    <h1>Ship</h1>
+  <div>{this.state.data}</div>
 
+  
     )
   }
 }
