@@ -8,9 +8,14 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import About from "./pages/About";
+<<<<<<< HEAD
 import Ships from "./Ships";
 import Footer from './components/Footer'
 import Review from './pages/Review'
+=======
+import Footer from './pages/Footer'
+
+>>>>>>> 8b1c256f49abf357fb9a4042bdc8a01b4002ca37
 // import components
 import {NavigationBar} from './components/NavigationBar'
 
@@ -23,9 +28,6 @@ import "./styles/search.css";
 import "./styles/ship.css";
 import "./styles/about.css";
 import "./styles/Review.css";
-
-const k_cruise_lines = 'cruise_lines'
-const k_ship = "ships"
 
 
 class App extends Component {
