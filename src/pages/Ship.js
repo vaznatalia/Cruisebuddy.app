@@ -20,12 +20,10 @@ class Ship extends React.Component {
     )
     this.setState({ship: data })
   }
-
-
-
   render(){
-    console.log(this.state)
+    console.log(this.state.data)
     return (
+  <div>{this.state.data}</div> 
       <>
       <div className="search-nav-container"></div>
       <div className="ship-image-cont"> 
@@ -40,7 +38,7 @@ class Ship extends React.Component {
         </div>
       </div>
       </>
-    )
+
   }
 }
 export default Ship
