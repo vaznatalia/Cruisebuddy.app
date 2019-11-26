@@ -13,7 +13,7 @@ import Review from './pages/Review'
 // import components
 
 import {NavigationBar} from './components/NavigationBar'
-//import {StarRating} from './components/StarRatingComponent'
+//import {StarRating} from './components/StarRating'
 
 // import CSS
 
