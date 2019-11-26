@@ -13,7 +13,9 @@ import Review from './pages/Review'
 
 
 // import components
-import NavigationBar from './components/NavigationBar'
+
+import {NavigationBar} from './components/NavigationBar'
+import {MainPage}  from 'react-bootstrap'
 
 
 // import CSS
@@ -25,7 +27,7 @@ import "./styles/search.css";
 import "./styles/ship.css";
 import "./styles/about.css";
 import "./styles/Review.css";
-
+import "./styles/MainPage.css";
 
 class App extends Component {
   state = { ship: []}

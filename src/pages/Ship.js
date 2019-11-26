@@ -23,8 +23,10 @@ class Ship extends React.Component {
   render(){
     console.log(this.state.data)
     return (
+
       <>
   <div>{this.state.data}</div> 
+
       <div className="search-nav-container"></div>
       <div className="ship-image-cont"> 
         <div className="ship-image-cont-left"> 
@@ -37,8 +39,7 @@ class Ship extends React.Component {
           <div className="ship-image overlay" id="right-4"><img src="https://loremflickr.com/300/300" alt="ship" /></div>
         </div>
       </div>
-      </>
-    )
-  }
+
 }
+
 export default Ship
