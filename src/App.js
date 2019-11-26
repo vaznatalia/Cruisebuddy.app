@@ -13,12 +13,14 @@ import Review from './pages/Review'
 
 
 // import components
+
 import {NavigationBar} from './components/NavigationBar'
 import {MainPage}  from 'react-bootstrap'
 
 
 // import CSS
 
+import './NavigationBar.css'
 import "./styles/global.css";
 import "./styles/home.css";
 import "./styles/search.css";
