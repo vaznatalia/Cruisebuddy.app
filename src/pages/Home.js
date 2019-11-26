@@ -1,7 +1,7 @@
 import React, { Component } from "react"
-import { NavigationBar } from "../components/NavigationBar"
+import { NavigationBar } from '../components/NavigationBar'
 import '../styles/home.css'
-import MainPage from "../components/MainPage"
+
 
 
 class Home extends Component {
@@ -26,7 +26,7 @@ class Home extends Component {
     const { query, destination, port } = this.state;
     return(
             <>
-          <NavigationBar />
+          <NavigationBar/>
           <div  className="hero-div">
           <div className="container">
             <form onSubmit={this.handleSubmit}>

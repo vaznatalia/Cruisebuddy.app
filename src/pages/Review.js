@@ -1,10 +1,14 @@
 import React from 'react'
 import '../styles/Review.css'
 import {Form } from 'react-bootstrap'
+import StarRatingComponent from 'react-star-rating-component';
+
 
 
 class Review extends React.Component{
-render(){
+
+
+  render(){
   return(
     <div>
     <div className="reviews-img">
@@ -25,39 +29,17 @@ render(){
                <Form.Label>On which dates did you cruise?</Form.Label>
                  <Form.Control type="date" placeholder="" />
                   </div>
-    
-    </Form>
-
+   </Form>
+     <h1>Rate item by item:</h1>
+     
+     
 
   </div>
-
   </div>
-
-  )
+ )
 }
 }
 
-{/* <Form>
-        <Form.Row>
-         <Form.Group  as={Row} controlId="formGroupEmail">
-           <Form.Label>Witch ship were you on?</Form.Label>
-             <Form size="sm" type="text" placeholder="Begin typing your ship name…" />
-          </Form.Group>
-          </Form.Row>
-          </Form>  */}
-            
-      {/* <div className="user-input"> 
-        <label>Witch ship were you on?</label>
-        <input/>
-      </div>
-      <div> 
-      Which itinerary did you go on?
-        <input/>
-      </div>
-      <div> 
-      On which dates did you cruise?
-      <input/>
-      </div> */}
 
 
 export default Review
