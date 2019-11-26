@@ -1,38 +1,15 @@
-
-
-.ship-image-cont {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-
-
+.carousel-wrapper {
+  position: relative;
+  z-index: 1;
 }
 
-img {
-    max-width:100%;
-    height: auto;
-  }
-
-.ship-image > img {
- height: 100%;
- width:100%;
- object-fit:cover; 
- 
+.button-wrapper {
+  position: absolute; 
+  right: 5px; 
+  bottom: 5px;
+  z-index: 100;
 }
 
-.ship-image, #left-1 {
-  height: auto;
-  width: auto;
- }
- .ship-image, #right-2, #right-3, #right-4 {
-
- }
-
- .ship-image-cont-left {
-
- }
- .ship-image-cont-right {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
- }
-
+.next-div {
+  padding: 10px;
+}
