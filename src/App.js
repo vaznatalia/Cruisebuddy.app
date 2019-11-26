@@ -25,6 +25,8 @@ import "./styles/ship.css";
 import "./styles/about.css";
 import "./styles/Review.css";
 import "./styles/MainPage.css";
+import "./styles/homemenu.css";
+
 
 class App extends Component {
   state = { ship: []}

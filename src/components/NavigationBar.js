@@ -3,15 +3,90 @@ import { NavLink } from 'react-router-dom'
 
 
 export const  NavigationBar = () =>( 
-      <nav className="navbar">
-        <div className="navbar-l">
-          <NavLink exact to="/" className="logo">Cruisebuddy</NavLink>
+  <div className="outermost">
+      <div className="container">
+      <nav className="nav-bar">
+    
+    
+    <ul>
+    <li className="navbar-brand">Cruisebuddy</li>
+      <li>Destination
+        <div className="mega-menu">
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
         </div>
-        <div className="navbar-r">
-            <NavLink exact to="/SubmitReview" className="logo">
-              Write a Review
-             </NavLink>
+      </li>
+      <li>Port
+        <div className="mega-menu">
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
         </div>
-      </nav>
+      </li>
+      <li>Cruiselines
+        <div className="mega-menu">
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+          <div className="inner-mega-menu">
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+            <p>mega-menu</p>
+          </div>
+        </div>
+      </li>
+      <li>Review Button</li>
+    </ul>
+  </nav>
+</div>
+</div>
+
     )
   

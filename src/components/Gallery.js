@@ -1,8 +1,6 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
 
-
-
   const Gallery = () => {
     const params = {
       slidesPerView: 5,
