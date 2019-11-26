@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import { NavigationBar } from "../components/NavigationBar"
+import { NavigationBar } from '../components/NavigationBar'
 import '../styles/home.css'
+
 
 
 class Home extends Component {
@@ -35,29 +36,8 @@ class Home extends Component {
       </div>
       </form>
     </div>
-
-    <select className="browser-default custom-select" value={destination} onChange={this.handleFilterChange('destination')}>
-      <option selected>Destination</option>
-      <option value="d-1">D-One</option>
-      <option value="d-2">D-Two</option>
-      <option value="d-3">D-Three</option>
-    </select>
-    <select className="browser-default custom-select" value={port} onChange={this.handleFilterChange('port')}>
-      <option selected>Port</option>
-      <option value="p-1">P-One</option>
-      <option value="p-2">P-Two</option>
-      <option value="p-3">P-Three</option>
-    </select>
-    <select className="browser-default custom-select">
-      <option selected>Any Departure</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
-
-  </div>
-  </>
-)
-}
-}
-export default Home
+          </>
+          )
+          }
+          }
+          export default Home

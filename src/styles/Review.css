@@ -1,0 +1,29 @@
+.reviews-img {
+  background-image: url("../images/review-hero.jpg");
+  box-sizing: border-box;
+  height: 777px;
+  width: 1440px;
+  background-color: #ffffff;
+  background-size: cover;
+}
+
+.user-input {
+}
+
+h1 {
+  height: 108px;
+  width: 591px;
+  color: #101a1f;
+  font-family: ".SF NS Display";
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  padding: 60px;
+}
+
+.review-input {
+  width: 382px;
+  height: 50px;
+  margin: none;
+  padding: 60px;
+}
