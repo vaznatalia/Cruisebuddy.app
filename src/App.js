@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,7 +7,7 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import About from "./pages/About";
-import Footer from './pages/Footer'
+import Footer from './components/Footer'
 
 // import components
 import {NavigationBar} from './components/NavigationBar'
