@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,8 +6,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
+import About from "./pages/About";
 import Footer from './components/Footer'
 import Review from './pages/Review'
+
 // import components
 
 import {NavigationBar} from './components/NavigationBar'
@@ -24,6 +25,8 @@ import "./styles/ship.css";
 import "./styles/about.css";
 import "./styles/Review.css";
 import "./styles/MainPage.css";
+import "./styles/homemenu.css";
+
 
 class App extends Component {
   state = { ship: []}
