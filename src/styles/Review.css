@@ -49,18 +49,12 @@ h1 {
   width:5em;
 }
 
-.star-rating input {
-  display:none;
-}
-
 .star-rating label {
   color:#ccc;
   cursor:pointer;
 }
 
-.star-rating :checked ~ label {
-  color:blue;
-}
+
 
 .star-rating label:hover,
 .star-rating label:hover ~ label {
@@ -81,4 +75,8 @@ h1 {
 .form-group-{
   width: 600px;
 
+}
+
+.active {
+  color: blue !important;
 }

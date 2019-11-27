@@ -1,14 +1,41 @@
 import React from 'react'
 import '../styles/Review.css'
 import {Form, Button } from 'react-bootstrap'
-import {StarRating} from '../components/StarRating';
-
-
+import StarRating from '../components/StarRating';
+import classNames from 'classnames';
 
 class Review extends React.Component{
+  state={
+    fitnessRating : "1",
+    lodging : "1",
+    excursions : "1",
+    dining : "1",
+    service : "1", 
+    publicAreas : "1",
+    value: "1",
+    entertainmentRating : "1",
+    avgRating: 0,
+  }
 
-
+  handleRatingSelection = stateId => val => {
+    const { avgRating: _, ...otherState } = this.state;
+    const ratings = Object.values({ ...otherState, [stateId]: val });
+    const averageRating = Math.ceil(ratings.reduce((acc, rating) => acc + +rating, 0) / ratings.length);
+    this.setState({ [stateId]: val, averageRating });
+  }
+  
   render(){
+    const { averageRating } = this.state;
+  const categories = [
+    { label: 'Fitnesss Rating', value: 'fitnessRating' },
+    { label: 'Lodging', value: 'lodging' },
+    { label: 'Excursions', value: 'excursions' },
+    { label: 'Dining', value: 'dining' },
+    { label: 'Service', value: 'service' },
+    { label: 'Public Areas', value: 'publicAreas' },
+    { label: 'Value', value: 'value' },
+    { label: 'Entertainment', value: 'entertainmentRating'},
+  ]
   return(
   <div>
     <div className="reviews-img">
@@ -35,28 +62,14 @@ class Review extends React.Component{
           <div className="main-review-page"> 
                
           <label>Choose Overal Rating</label>
-               <StarRating title="" /> 
+          <StarRating value={averageRating} />
             <div className="c-2"> 
-              <div className="div11">
-            <label>Lodging</label>
-             <StarRating title="" />
-             <label>Dinig</label> 
-             <StarRating title="" /> 
-             <label>Public Areas</label> 
-             <StarRating title="" /> 
-             <label>Enterteriment</label> 
-             <StarRating title="" /> 
-             </div>
-             <div className="div22">
-             <label>Fitness/Recreation  </label> 
-             <StarRating title="" /> 
-             <label>Excursions</label> 
-             <StarRating title="" /> 
-             <label>Service</label> 
-             <StarRating title="" /> 
-             <label>Value</label> 
-             <StarRating title="" /> 
-             </div>
+            {categories.map(({ value, label }) => (
+              <>
+                <label>{label}</label>
+                <StarRating category={value} value={this.state[value]} handleRating={this.handleRatingSelection(value)} />
+              </>
+              ))}
             </div>
         
     <div class="form-group-">
