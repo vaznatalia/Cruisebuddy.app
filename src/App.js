@@ -6,17 +6,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
+import About from "./pages/About";
 import Footer from './components/Footer'
 import Review from './pages/Review'
 
 // import components
 
-import {NavigationBar} from './components/NavigationBar'
-//import {StarRating} from './components/StarRating'
+import NavigationBar from './components/NavigationBar'
+//import {StarRating} from './components/StarRatingComponent'
 
 // import CSS
 
-import './styles/NavigationBar.css'
+import './NavigationBar.css'
 import "./styles/global.css";
 import "./styles/home.css";
 import "./styles/search.css";

@@ -7,28 +7,30 @@
 
 .outermost{
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-.nav-bar{
-  width: 100%;
+.homebar{
   background: #2c3e50;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 500px;
+  min-width: 500px;
   height: 75px;
   padding: 10px 0;
   box-sizing: border-box;
   border-bottom: 1px solid #1a252f;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   z-index: 5;
   align-content: center;
   background-color: #064064;
-  display: block;
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
 }
 
-.nav-bar ul{
+
+
+.homebar ul{
   width: 780px;
   height: 100%;
   margin: 0 auto;
@@ -38,7 +40,7 @@
   position: relative;
 }
 
-.nav-bar ul li{
+.homebar ul li{
   width: 120px;
   float: left;
   text-align: center;
@@ -49,19 +51,19 @@
   transition: all 0.4s ease;
 }
 
-.nav-bar ul li:last-child{
+.homebar ul li:last-child{
   margin-right: 0;
 }
 
-.nav-bar ul li:hover{
+.homebar ul li:hover{
   color: #18bc9c;
 }
 
-.nav-bar ul li:hover .mega-menu{
+.homebar ul li:hover .mega-menu{
   color: #fff;
 }
 
-.nav-bar ul li .mega-menu p:hover{
+.homebar ul li .mega-menu p:hover{
 
 }
 
@@ -75,10 +77,11 @@
   position: absolute;
   top: 65px;
   left: 0;
-  width: 750px;
-  height: 200px;
-  background: #2c3e50;
-  transition: all 0.7s ease;
+  margin: auto;
+  width: 500px;
+  height: 215px;
+  background:  #064064;
+  transition: all 0.5s ease;
   padding: 20px;
   box-sizing: border-box;
   visibility: hidden;
@@ -97,10 +100,11 @@
 
 .inner-mega-menu p{
   padding: 10px 0;
-  transition: all 0.7s ease;
+  margin: 0 auto;
+  transition: all 0.5s ease;
 }
 
-.nav-bar ul li:hover .mega-menu{
+.homebar ul li:hover .mega-menu{
   visibility: visible;
   opacity: 1;
 
