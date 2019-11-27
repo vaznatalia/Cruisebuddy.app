@@ -1,28 +1,31 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
+ 
 
 
 
-const Star = ({ selected = false, onClick = f => f }) => (
-  <div className={selected ? "star selected" : "star"} onClick={onClick} />
-);
 
-const StarRating = ({ totalStars }) => {
-  const [starsSelected, selectStar] = useState(0);
-  return (
+
+export const StarRating = ({ title }) => {
+
+ return(
     <div className="star-rating">
-      {[...Array(totalStars)].map((n, i) => (
-        <Star
-          key={i}
-          selected={i < starsSelected}
-          onClick={() => selectStar(i + 1)}
-        />
-      ))}
-      <p>
-        {starsSelected} of {totalStars} stars
-      </p>
+              <span>{title}</span>
+        <input type="radio" id="5-stars" name="rating" value="5" />
+        <label for="5-stars" class="star">&#9733;</label>
+        <input type="radio" id="4-stars" name="rating" value="4" />
+        <label for="4-stars" class="star">&#9733;</label>
+        <input type="radio" id="3-stars" name="rating" value="3" />
+        <label for="3-stars" class="star">&#9733;</label>
+        <input type="radio" id="2-stars" name="rating" value="2" />
+        <label for="2-stars" class="star">&#9733;</label>
+        <input type="radio" id="1-star" name="rating" value="1" />
+        <label for="1-star" class="star">&#9733;</label>
     </div>
-  );
+
+ )
+
+
+
 };
 
-render(<StarRating totalStars={5} />, document.getElementById("root"));
+
