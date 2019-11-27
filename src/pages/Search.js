@@ -3,6 +3,7 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 class Search extends Component {
   state = { ships: [] }
   componentDidMount() {
@@ -22,6 +23,7 @@ class Search extends Component {
   }
   render(){
     const { ships } = this.state
+      console.log(this.state)
     return(
       <>
       <div className="search-nav-container"></div>
@@ -73,13 +75,15 @@ class Search extends Component {
       </div>
       <div className="search-results-container"></div>
       <div className="container">
-        {ships.map(ship => (
+        {ships.map(ship => {
+          const firstReview = ship.reviews[0] || {};
+          return (
           <>
           <Link to={`/ship/${ship.id}`}>
             <div className="card mb-3">
               <div className="row no-gutters">
                 <div className="col-md-4">
-                  <img src="https://loremflickr.com/300/300/ship" className="card-img" alt="Ship" />
+                  <img src={ship.url} className="card-img" alt="Ship" />
                 </div>
               <div className="col-md-8">
                     <div className="card-body">
@@ -87,16 +91,14 @@ class Search extends Component {
                       <p className="card-text"><small class="text-muted">{ship.reviews.length} Reviews</small></p>
               </div>
               <ul>
-                {ship.reviews.map(({ body }) => (
-                  <li>{body}</li>
-                ))}
+                <li className="review-preview">{firstReview.body}</li>
               </ul>
             </div>
           </div>
         </div>
         </Link>
           </>
-        ))}
+        )})}
       </div>
       <div className="search-show-container"></div>
       </>

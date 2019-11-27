@@ -1,3 +1,4 @@
+
 import React, { Fragment } from "react";
 import classNames from 'classnames';
 
@@ -13,3 +14,11 @@ const StarRating = ({ value, handleRating }) => {
  )};
 
 export default StarRating
+
+
+
+
+
+
+
+
