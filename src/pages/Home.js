@@ -18,7 +18,6 @@ class Home extends Component {
     const { query, destination, port } = this.state;
     return(
             <>
-        
           <div  className="hero-div">
           <div className="container">
             <form onSubmit={this.handleSubmit}>

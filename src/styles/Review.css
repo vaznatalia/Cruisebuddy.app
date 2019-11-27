@@ -1,3 +1,4 @@
+
 .reviews-img {
   background-image: url("../images/review-hero.jpg");
   box-sizing: border-box;
@@ -7,8 +8,8 @@
   background-size: cover;
 }
 
-.user-input {
-}
+
+
 
 h1 {
   height: 108px;
@@ -17,13 +18,67 @@ h1 {
   font-family: ".SF NS Display";
   font-size: 24px;
   line-height: 36px;
-  text-align: center;
-  padding: 60px;
+  padding: 80px;
+  margin-left: 80px;
+
 }
 
+ .main-review-page{
+   padding: 100px; 
+   margin-left: 80px;
+
+ }
 .review-input {
   width: 382px;
   height: 50px;
   margin: none;
   padding: 60px;
+
+
+}
+/* component */
+
+.star-rating {
+ 
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:5em;
+}
+
+.star-rating input {
+  display:none;
+}
+
+.star-rating label {
+  color:#ccc;
+  cursor:pointer;
+}
+
+.star-rating :checked ~ label {
+  color:blue;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: blue;
+}
+.c-2 {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 100px;  
+ 
+  }
+  
+  .div11 { grid-area: 1 / 2 / 2 / 3; }
+  .div22 { grid-area: 1 / 1 / 2 / 2; }
+/* explanation */
+
+.form-group-{
+  width: 600px;
+
 }
