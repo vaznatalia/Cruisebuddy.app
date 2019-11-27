@@ -17,7 +17,7 @@ import {NavigationBar} from './components/NavigationBar'
 
 // import CSS
 
-import './NavigationBar.css'
+import './styles/NavigationBar.css'
 import "./styles/global.css";
 import "./styles/home.css";
 import "./styles/search.css";

@@ -1,28 +1,18 @@
 import React from 'react';
 import axios from 'axios';
+import { get } from 'lodash';
 import Gallery from '../components/Gallery'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; 
 
-const images = [
-  'https://loremflickr.com/1000/500',
-  'https://loremflickr.com/1000/500',
-  'https://loremflickr.com/1000/500',
-  'https://loremflickr.com/1000/500',
-];
 
 class Ship extends React.Component {
-  state = { 
-    ship: {}
-  }
-  constructor(props) {
-    super(props);
- 
-    this.state = {
+      state = {
       photoIndex: 0,
       isOpen: false,
-    };
-  }
+      ship: {},
+    }
+
 
 
   componentDidMount() {
@@ -42,44 +32,50 @@ class Ship extends React.Component {
 
 
 
+
   render(){
+    console.log(this.state)
+    const { ship } = this.state;
+    const { ship_images = [] } = ship;
     const { photoIndex, isOpen } = this.state;
-    const image1 = 'https://loremflickr.com/500/400'
-    const image2 = 'https://loremflickr.com/500/400'
-    const image3 = 'https://loremflickr.com/500/400'
-    const image4 = 'https://loremflickr.com/500/400'
-    const image5 = 'https://loremflickr.com/500/400'
+    const mainSrc = get(ship_images, [photoIndex, 'url'], '');
+    const nextSrc = get(ship_images, [(photoIndex + 1) % ship_images.length, 'url'], '')
+    const prevSrc = get(ship_images, [(photoIndex + ship_images.length - 1) % ship_images.length, 'url'], '');
     return (
-      
       <>
       <div className="carousel-wrapper">
-      <Gallery />
+      <Gallery key={ship_images.length} shipImages={ship_images} />
       
       <div className="button-wrapper ">
       <button type="button" className="btn btn-light" onClick={() => this.setState({ isOpen: true })}>
-            View More Photos
+            View More 
           </button>
-  
           {isOpen && (
             <Lightbox
-              mainSrc={images[photoIndex]}
-              nextSrc={images[(photoIndex + 1) % images.length]}
-              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              mainSrc={mainSrc}
+              nextSrc={nextSrc}
+              prevSrc={prevSrc}
               onCloseRequest={() => this.setState({ isOpen: false })}
               onMovePrevRequest={() =>
                 this.setState({
-                  photoIndex: (photoIndex + images.length - 1) % images.length,
+                  photoIndex: (photoIndex + ship_images.length - 1) % ship_images.length,
                 })
               }
               onMoveNextRequest={() =>
                 this.setState({
-                  photoIndex: (photoIndex + 1) % images.length,
+                  photoIndex: (photoIndex + 1) % ship_images.length,
                 })
               }
             />
           )}
           </div>
           </div>
+          <div className="ship-rating">
+            <p>Rating:</p>
+           
+
+          </div>
+
       </>
     )
   }
