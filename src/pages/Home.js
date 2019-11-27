@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import { NavigationBar } from '../components/NavigationBar'
 import '../styles/home.css'
 class Home extends Component {
   state = { query: '', destination: '', port: '' }
@@ -8,7 +7,7 @@ class Home extends Component {
     e.preventDefault();
     const { query, ...queryParams } = this.state;
     const redirectPath = Object.keys(queryParams).reduce((acc, paramKey) => {
-      const paramValue = queryParams[paramKey]
+      const paramValue = queryParams[paramKey] 
       if (!paramValue) return acc;
       return acc ? acc + `&${paramKey}=${paramValue}` : `?${paramKey}=${paramValue}`
     }, '')
@@ -19,12 +18,12 @@ class Home extends Component {
     const { query, destination, port } = this.state;
     return(
             <>
-          <NavigationBar/>
           <div  className="hero-div">
           <div className="container">
             <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search for Reviews" value={query} onChange={this.handleQueryChange} />
+            <label for="home-input">Find</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value={query} onChange={this.handleQueryChange} />
             </div>
             </form>
           </div>
