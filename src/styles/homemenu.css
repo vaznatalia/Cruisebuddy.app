@@ -10,6 +10,13 @@
   font-size: 12px;
 }
 
+.home-search-box{
+  max-width: 600px;
+  min-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .homebar{
   background: #2c3e50;
   margin: 0 auto;
@@ -32,7 +39,6 @@
 
 .homebar ul{
   width: 780px;
-  height: 100%;
   margin: 0 auto;
   list-style: none;
   font-weight: bold;
@@ -64,13 +70,8 @@
 }
 
 .homebar ul li .mega-menu p:hover{
+  color: #18bc9c;
 
-}
-
-.header-banner{
-  background: #18bc9c;
-  width: 100%;
-  height: 350px;
 }
 
 .mega-menu{
@@ -79,7 +80,6 @@
   left: 0;
   margin: auto;
   width: 500px;
-  height: 215px;
   background:  #064064;
   transition: all 0.5s ease;
   padding: 20px;

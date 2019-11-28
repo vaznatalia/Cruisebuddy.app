@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import NavigationBar from "../components/NavigationBar"
+import Footer from "../components/Footer"
 import '../styles/home.css'
 
 class Home extends Component {
@@ -24,7 +25,7 @@ class Home extends Component {
           <div className="container">
             <form onSubmit={this.handleSubmit}>
             <div className="form-group">
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search for Reviews" value={query} onChange={this.handleQueryChange} />
+            <input type="text" className="form-control home-search-box" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search for Reviews" value={query} onChange={this.handleQueryChange} />
             </div>
             </form>
           </div>
@@ -124,6 +125,8 @@ class Home extends Component {
           <div class="div6"> </div>
           </div>
           </>
+
+          
           )
           }
           }
