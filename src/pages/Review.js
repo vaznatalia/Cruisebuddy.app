@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/Review.css'
 import {Form } from 'react-bootstrap'
-import StarRatingComponent from 'react-star-rating-component';
 
 
 
