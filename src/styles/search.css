@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .search-nav-container {
-  background-color: #064164;
+  background-color: #1b77ac;
   height: 64px;
 }
 
@@ -42,4 +42,92 @@ button, input, optgroup, select, textarea {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.desc-preview {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+  text-decoration: none!important;
+}
+
+.card-title {
+  color: #3A464C;
+}
+
+.desc-preview a:hover {
+  text-decoration: none!important;
+}
+.card a:hover {
+  text-decoration: none!important;
+}
+
+
+
+
+/* star rating */
+
+
+.star-ratings {
+  position: relative;
+  display: inline-flex;
+}
+
+.star-svg {
+  width: 50px;
+  height: 50px;
+}
+
+.default .star-svg {
+  width: 14px;
+  height: 14px;
+}
+
+.some-modal .star-svg {
+  width: 18px;
+  height: 18px;
+}
+
+.star-container {
+  position: relative;
+}
+
+.default .star-container {
+  margin-right: 7px;
+}
+
+.star-svg .star {
+  fill: #cbd3e3;
+}
+
+.star-svg.star-level .star {
+  fill: #6d7a82;
+}
+
+.star-svg.star-selected .star {
+  fill: #ff9700;
+}
+
+/* Recommend to do this inline*/
+.star-svg.star-level.star-multi-level .star {
+  /*fill: url('/#starGrad');*/
+}
+
+.star-grad {
+  position: absolute;
+  z-index: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.stop-color-first {
+  stop-color: #6d7a82;
+  stop-opacity: 1;
+}
+
+.stop-color-final {
+  stop-color: #cbd3e3;
+  stop-opacity: 1;
 }
