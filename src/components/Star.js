@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-
-
-const Star = ({ }) => (
+class Star extends Component{
+    render (){
+        return(
+            <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            </div>
+        )
+    }
+}
+export default Star
 

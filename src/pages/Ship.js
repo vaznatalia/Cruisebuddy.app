@@ -3,16 +3,16 @@ import axios from 'axios';
 import { get } from 'lodash';
 import Gallery from '../components/Gallery'
 import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css'; 
+import 'react-image-lightbox/style.css';
+import { Description } from '../components/Description';
 
 
 class Ship extends React.Component {
-      state = {
-      photoIndex: 0,
-      isOpen: false,
-      ship: {},
-      averageRating:0
-    }
+  state = {
+    photoIndex: 0,
+    isOpen: false,
+    ship: {},
+  }
 
 
 
@@ -28,16 +28,14 @@ class Ship extends React.Component {
       { 'Content-Type': 'application/json', Authorization: sessionStorage.getItem('AUTH_TOKEN') }
 
     )
-    const averageRating = data.reviews.reduce((acc, review ) => acc + review.rating, 0) / data.reviews.length
-    this.setState({ship: data, averageRating })
+    this.setState({ ship: data })
   }
 
-    
 
 
 
-  render(){
-    console.log(this.state.averageRating)
+  render() {
+    console.log(this.state)
     const { ship } = this.state;
     const { ship_images = [] } = ship;
     const { photoIndex, isOpen } = this.state;
@@ -46,38 +44,40 @@ class Ship extends React.Component {
     const prevSrc = get(ship_images, [(photoIndex + ship_images.length - 1) % ship_images.length, 'url'], '');
     return (
       <>
-      <div className="carousel-wrapper">
-      <Gallery key={ship_images.length} shipImages={ship_images} />
-      
-      <div className="button-wrapper ">
-      <button type="button" className="btn btn-light" onClick={() => this.setState({ isOpen: true })}>
-            View More 
+        <div className="carousel-wrapper">
+          <Gallery key={ship_images.length} shipImages={ship_images} />
+
+          <div className="button-wrapper ">
+            <button type="button" className="btn btn-light" onClick={() => this.setState({ isOpen: true })}>
+              View More
           </button>
-          {isOpen && (
-            <Lightbox
-              mainSrc={mainSrc}
-              nextSrc={nextSrc}
-              prevSrc={prevSrc}
-              onCloseRequest={() => this.setState({ isOpen: false })}
-              onMovePrevRequest={() =>
-                this.setState({
-                  photoIndex: (photoIndex + ship_images.length - 1) % ship_images.length,
-                })
-              }
-              onMoveNextRequest={() =>
-                this.setState({
-                  photoIndex: (photoIndex + 1) % ship_images.length,
-                })
-              }
-            />
+            {isOpen && (
+              <Lightbox
+                mainSrc={mainSrc}
+                nextSrc={nextSrc}
+                prevSrc={prevSrc}
+                onCloseRequest={() => this.setState({ isOpen: false })}
+                onMovePrevRequest={() =>
+                  this.setState({
+                    photoIndex: (photoIndex + ship_images.length - 1) % ship_images.length,
+                  })
+                }
+                onMoveNextRequest={() =>
+                  this.setState({
+                    photoIndex: (photoIndex + 1) % ship_images.length,
+                  })
+                }
+              />
+              
+             
           )}
           </div>
-          </div>
-          <div className="ship-rating">
-            <p>Rating:</p>
-           
+        </div>
+        <div className="ship-rating">
+          <Description title="" />
 
-          </div>
+
+        </div>
 
       </>
     )
