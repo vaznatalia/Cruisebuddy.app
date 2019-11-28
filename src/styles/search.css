@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 .search-nav-container {
-  background-color: #064164;
+  background-color: #1b77ac;
   height: 64px;
 }
 
@@ -43,3 +43,26 @@ button, input, optgroup, select, textarea {
   overflow: hidden;
   white-space: nowrap;
 }
+
+.desc-preview {
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow: hidden;
+  max-height: 3.6em;
+  line-height: 1.8em;
+  text-decoration: none!important;
+}
+
+.card-title {
+  color: #3A464C;
+}
+
+.desc-preview a:hover {
+  text-decoration: none!important;
+}
+.card a:hover {
+  text-decoration: none!important;
+}
+
+
+

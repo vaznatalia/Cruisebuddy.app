@@ -11,6 +11,7 @@ class Ship extends React.Component {
       photoIndex: 0,
       isOpen: false,
       ship: {},
+      averageRating:0
     }
 
 
@@ -27,14 +28,16 @@ class Ship extends React.Component {
       { 'Content-Type': 'application/json', Authorization: sessionStorage.getItem('AUTH_TOKEN') }
 
     )
-    this.setState({ship: data })
+    const averageRating = data.reviews.reduce((acc, review ) => acc + review.rating, 0) / data.reviews.length
+    this.setState({ship: data, averageRating })
   }
 
+    
 
 
 
   render(){
-    console.log(this.state)
+    console.log(this.state.averageRating)
     const { ship } = this.state;
     const { ship_images = [] } = ship;
     const { photoIndex, isOpen } = this.state;
