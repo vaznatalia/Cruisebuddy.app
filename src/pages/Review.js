@@ -1,44 +1,18 @@
 import React from 'react'
 import '../styles/Review.css'
-import {Form, Button } from 'react-bootstrap'
-import StarRating from '../components/StarRating';
-import classNames from 'classnames';
+import {Form } from 'react-bootstrap'
+import StarRatingComponent from 'react-star-rating-component';
+
+
 
 class Review extends React.Component{
-  state={
-    fitnessRating : "1",
-    lodging : "1",
-    excursions : "1",
-    dining : "1",
-    service : "1", 
-    publicAreas : "1",
-    value: "1",
-    entertainmentRating : "1",
-    avgRating: 0,
-  }
 
-  handleRatingSelection = stateId => val => {
-    const { avgRating: _, ...otherState } = this.state;
-    const ratings = Object.values({ ...otherState, [stateId]: val });
-    const averageRating = Math.ceil(ratings.reduce((acc, rating) => acc + +rating, 0) / ratings.length);
-    this.setState({ [stateId]: val, averageRating });
-  }
-  
+
   render(){
-    const { averageRating } = this.state;
-  const categories = [
-    { label: 'Fitnesss Rating', value: 'fitnessRating' },
-    { label: 'Lodging', value: 'lodging' },
-    { label: 'Excursions', value: 'excursions' },
-    { label: 'Dining', value: 'dining' },
-    { label: 'Service', value: 'service' },
-    { label: 'Public Areas', value: 'publicAreas' },
-    { label: 'Value', value: 'value' },
-    { label: 'Entertainment', value: 'entertainmentRating'},
-  ]
   return(
-  <div>
+    <div>
     <div className="reviews-img">
+
       <h1>We’d love to hear your opinion. Your feedback helps 
           fellow cruisers choose the best cruise for their needs.  
           Thank you. </h1> 
@@ -79,5 +53,6 @@ class Review extends React.Component{
     )
     
   }
+
 }
 export default Review

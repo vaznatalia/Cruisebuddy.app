@@ -79,8 +79,8 @@ class Search extends Component {
           const firstReview = ship.reviews[0] || {};
           return (
           <>
-          <Link to={`/ship/${ship.id}`}>
             <div className="card mb-3">
+            <Link to={`/ship/${ship.id}`}>
               <div className="row no-gutters">
                 <div className="col-md-4">
                   <img src={ship.url} className="card-img" alt="Ship" />
@@ -88,15 +88,15 @@ class Search extends Component {
               <div className="col-md-8">
                     <div className="card-body">
                       <h5 className="card-title">{ship.cruise_name.name} {ship.name}</h5>
+                      <p className="card-text desc-preview">{ship.description.substring(0, ship.description.indexOf('.'))}</p>
                       <p className="card-text"><small class="text-muted">{ship.reviews.length} Reviews</small></p>
+                      <p className="card-text desc-preview"><small class="text-muted">"{firstReview.body}"</small></p>
               </div>
-              <ul>
-                <li className="review-preview">{firstReview.body}</li>
-              </ul>
             </div>
           </div>
+          </Link>
         </div>
-        </Link>
+       
           </>
         )})}
       </div>
