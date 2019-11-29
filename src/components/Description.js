@@ -17,7 +17,6 @@ export const Description = ({ description }) => {
 
 
                 <h1>Reviews</h1>
-                
 
         </div>
 
