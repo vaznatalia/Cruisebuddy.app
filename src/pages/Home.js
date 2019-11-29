@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import NavigationBar from "../components/NavigationBar"
 import Footer from "../components/Footer"
+import Cards from '../components/Cards'
+
 import '../styles/home.css'
 
 class Home extends Component {
@@ -115,15 +117,8 @@ class Home extends Component {
 
   
           </div>
-          <h1>HOT CRUISE DEALS</h1>
-          <div class="deck-card">
-          <div class="div1"></div>
-          <div class="div2"> </div>
-          <div class="div3"> </div>
-          <div class="div4"> </div>
-          <div class="div5"> </div>
-          <div class="div6"> </div>
-          </div>
+
+          <Cards/>
           </>
 
           
