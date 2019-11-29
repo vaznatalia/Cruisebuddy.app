@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import StarRating from '../components/StarRating';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Search extends Component {
@@ -70,7 +71,7 @@ class Search extends Component {
       <div className="container">
         <div className="search-sort-container">
           <div className="search-sort">Sort by Recommended</div>
-          <div className="search-sort">Showing 1-6 of 32 results</div>
+          <div className="search-sort">Showing 1-6 of {ships.length} results</div>
         </div>
       </div>
       <div className="search-results-container"></div>
@@ -83,13 +84,16 @@ class Search extends Component {
             <Link to={`/ship/${ship.id}`}>
               <div className="row no-gutters">
                 <div className="col-md-4">
-                  <img src={ship.url} className="card-img" alt="Ship" />
+                  <img src={ship.url} className="card-img search-image" alt="Ship" />
                 </div>
               <div className="col-md-8">
                     <div className="card-body">
                       <h5 className="card-title">{ship.cruise_name.name} {ship.name}</h5>
-                      <p className="card-text desc-preview">{ship.description.substring(0, ship.description.indexOf('.'))}</p>
-                      <p className="card-text"><small class="text-muted">{ship.reviews.length} Reviews</small></p>
+                      <div className="search-ratings-reviews">
+                      <div className="search-ratings"> <StarRating value='4' noHover /></div>
+                      <div className="search-reviews"><p className="card-text review-text"><small class="text-muted review-text">{ship.reviews.length} Reviews</small></p></div>
+                      </div>
+                      <p className="card-text ship-preview">{ship.description.substring(0, ship.description.indexOf('.'))}</p>
                       <p className="card-text desc-preview"><small class="text-muted">"{firstReview.body}"</small></p>
               </div>
             </div>

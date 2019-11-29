@@ -12,6 +12,7 @@ class Ship extends React.Component {
     photoIndex: 0,
     isOpen: false,
     ship: {},
+    text: ''
   }
 
 
@@ -35,8 +36,9 @@ class Ship extends React.Component {
 
 
   render() {
-    console.log(this.state)
+    
     const { ship } = this.state;
+    console.log("this state", ship)
     const { ship_images = [] } = ship;
     const { photoIndex, isOpen } = this.state;
     const mainSrc = get(ship_images, [photoIndex, 'url'], '');
@@ -74,7 +76,17 @@ class Ship extends React.Component {
           </div>
         </div>
         <div className="ship-rating">
-          <Description title="" />
+         
+        <div>
+            <h1>{ get(ship.cruise_line, "name", "")} {ship.name}</h1>
+            {/* <h1>{ get(ship.cruise_line, "name", "") }</h1> */}
+       
+            <div className="ship-description">{ get(ship, "description", "")}</div>
+              
+                <h1>Reviews</h1>
+                
+
+        </div>
 
 
         </div>
