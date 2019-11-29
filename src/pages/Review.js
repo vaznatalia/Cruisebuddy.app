@@ -3,6 +3,7 @@ import '../styles/Review.css'
 import {Form } from 'react-bootstrap'
 import StarRating from '../components/StarRating';
 import classNames from 'classnames';
+import MyDropzone from '../components/MyDropzone'
 
 
 
@@ -79,8 +80,8 @@ import classNames from 'classnames';
                 <StarRating category={value} value={this.state[value]} handleRating={this.handleRatingSelection(value)} />
               </div>
               ))}
-             </div>
-             
+         </div> 
+         <MyDropzone />
          </div>
     )
     

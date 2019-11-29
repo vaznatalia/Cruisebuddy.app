@@ -80,3 +80,11 @@ h1 {
 .active {
   color: blue !important;
 }
+.box{
+  width: 682px;
+  height: 330px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  padding: 200px;
+  margin-left: 60px;
+}
