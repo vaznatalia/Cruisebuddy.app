@@ -6,9 +6,6 @@ import classNames from 'classnames';
 import MyDropzone from '../components/MyDropzone'
 
 
-
-
-
   class Review extends React.Component{
     state={
       fitnessRating : "1",
@@ -39,23 +36,18 @@ import MyDropzone from '../components/MyDropzone'
       { label: 'Value', value: 'value' },
       { label: 'Entertainment', value: 'entertainmentRating'},
     ]
-    
 
   return(
     <div>
     <div className="reviews-img">
-
-      <h1>We’d love to hear your opinion. Your feedback helps 
+      <h1>We'd love to hear your opinion. Your feedback helps 
           fellow cruisers choose the best cruise for their needs.  
           Thank you. </h1> 
-    
-
           <Form className="review-input">
             <div controlId="formGrid">
               <Form.Label>Witch ship were you on?</Form.Label>
               <Form.Control placeholder="Begin typing your ship name…" />
             </div>
-
             <div controlId="formGrid">
               <Form.Label>Which itinerary did you go on?</Form.Label>
               <Form.Control placeholder="Itinerary" />
@@ -65,15 +57,10 @@ import MyDropzone from '../components/MyDropzone'
               <Form.Control type="date" placeholder="" />
             </div>
           </Form>
-
-
         </div>
         <div className="main-review-page">
-
           <label>Choose Overal Rating</label>
-
           <StarRating value={averageRating} />
-           
             {categories.map(({ value, label }) => (
               <div>
                 <label>{label}</label>
@@ -84,8 +71,6 @@ import MyDropzone from '../components/MyDropzone'
          <MyDropzone />
          </div>
     )
-    
   }
-
 }
 export default Review
