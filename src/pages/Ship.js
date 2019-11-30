@@ -89,6 +89,17 @@ class Ship extends React.Component {
             <div className="ship-description">{ get(ship, "description", "")}</div>
               
                 <h1>Reviews</h1>
+
+                                {
+                  ship.reviews && ship.reviews.map(review => {
+                    return(
+                      <>
+                    <p>{review.rating}</p>
+                    <p>{review.body}</p>
+                  </>
+                    )
+                  })
+                }
                 
 
         </div>
@@ -96,7 +107,6 @@ class Ship extends React.Component {
 
         </div>
 
-        <CommentExample />
 
 
 
