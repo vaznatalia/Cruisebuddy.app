@@ -6,6 +6,11 @@ import '../styles/Review.css'
 import StarRating from '../components/StarRating';
 import MyDropzone from '../components/MyDropzone'
 
+import ReactDOM from "react-dom";
+import { Container, Header, List } from "semantic-ui-react";
+
+import CommentExample from "../components/CommentExample";
+
 const CATEGORIES = [
   { label: 'Fitnesss Rating', value: 'fitnessRating' },
   { label: 'Lodging', value: 'lodging' },
@@ -16,7 +21,6 @@ const CATEGORIES = [
   { label: 'Value', value: 'value' },
   { label: 'Entertainment', value: 'entertainmentRating'},
 ]
-
 
   class Review extends React.Component{
     static contextType = AuthContext
