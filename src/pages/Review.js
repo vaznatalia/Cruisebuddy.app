@@ -5,6 +5,11 @@ import StarRating from '../components/StarRating';
 import classNames from 'classnames';
 import MyDropzone from '../components/MyDropzone'
 
+import ReactDOM from "react-dom";
+import { Container, Header, List } from "semantic-ui-react";
+
+import CommentExample from "../components/CommentExample";
+
 
   class Review extends React.Component{
     state={
