@@ -4,6 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
 
 
+import { AuthContextProvider } from './context/AuthContext';
+
 // import pages
 import Home from "./pages/Home";
 import Search from "./pages/Search";
@@ -35,7 +37,7 @@ class App extends Component {
   render() {
     const { ships } = this.state;
     return (
-      <>
+      <AuthContextProvider>
         <BrowserRouter>
           <NavigationBar />
           <Switch>
@@ -46,7 +48,7 @@ class App extends Component {
             </Switch>
           <Footer/>
         </BrowserRouter>
-      </>
+      </AuthContextProvider>
     );
   }
 
