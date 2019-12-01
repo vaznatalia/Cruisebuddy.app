@@ -24,11 +24,13 @@ class Home extends Component {
     return(
             <>
           <div  className="hero-div">
-          <div className="input-group mb-3">
+          <div className="input-group mb-3 home-input-group" onSubmit={this.handleSubmit}>
+            
             <input type="text" className="form-control"  placeholder="Search for Reviews"  aria-describedby="basic-addon2" value={query} onChange={this.handleQueryChange} />
             <div className="input-group-append">
-              <button  onSubmit={this.handleSubmit} className="btn btn-primary" type="button">Search</button>
+              <button  className="btn btn-primary" type="button" onClick={this.handleSubmit}>Search</button>
               </div>
+         
             </div>
           </div>
           

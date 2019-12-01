@@ -13,8 +13,10 @@
   font-size: 12px;
 }
 
-.mb-3{
+.home-input-group{
  margin-top:300px;
+ width: 70%;
+ padding-left: 20rem;
  
 }
 
