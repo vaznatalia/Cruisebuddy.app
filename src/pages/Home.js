@@ -3,6 +3,7 @@ import NavigationBar from "../components/NavigationBar"
 import Footer from "../components/Footer"
 import Cards from '../components/Cards'
 import '../styles/home.css'
+import "../styles/homemenu.css";
 
 class Home extends Component {
   state = { query: '', destination: '', port: '' }

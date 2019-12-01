@@ -3,10 +3,11 @@ import axios from 'axios';
 import { get } from 'lodash';
 import Gallery from '../components/Gallery';
 import StarRating from '../components/StarRating';
-
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import 'semantic-ui-css/semantic.min.css';
+import "../styles/ship.css";
+import "../styles/commentgroup.css";
 
 
 import { Button, Comment, Form, Header, List, Container } from 'semantic-ui-react'
