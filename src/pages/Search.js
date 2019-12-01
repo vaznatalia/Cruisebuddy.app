@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import StarRating from '../components/StarRating';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "../styles/search.css";
 
 class Search extends Component {
   state = { ships: [] }
@@ -88,7 +89,7 @@ class Search extends Component {
                 </div>
               <div className="col-md-8">
                     <div className="card-body">
-                      <h5 className="card-title">{ship.cruise_name.name} {ship.name}</h5>
+                      <h5 className="card-title search-title">{ship.cruise_name.name} {ship.name}</h5>
                       <div className="search-ratings-reviews">
                       <div className="search-ratings"> <StarRating value='4' noHover /></div>
                       <div className="search-reviews"><p className="card-text review-text"><small class="text-muted review-text">{ship.reviews.length} Reviews</small></p></div>
