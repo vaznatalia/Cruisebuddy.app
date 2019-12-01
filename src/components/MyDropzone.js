@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-
+import upload from '../images/upload.png'
 
 class  MyDropzone extends React.Component {
   state ={
@@ -25,7 +25,9 @@ class  MyDropzone extends React.Component {
       return (
 
   
-       <div className="box" method="post"  >     
+       <div className="box" method="post"  >
+    
+         
         <input  style={{display: 'none'}} className="box" type="file"  onChange={this.fileSelectedHandler } 
         ref={fileInput => this.fileInput = fileInput}/>
         <button  class="btn btn-light" onClick={() => this.fileInput.click()} >Attach photo</button>

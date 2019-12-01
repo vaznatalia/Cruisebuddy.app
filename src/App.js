@@ -10,6 +10,7 @@ import { AuthContextProvider } from './context/AuthContext';
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
+import About from "./pages/About";
 import Footer from './components/Footer'
 import Review from './pages/Review'
 
