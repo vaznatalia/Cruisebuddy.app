@@ -7,6 +7,7 @@ import StarRating from '../components/StarRating';
 import MyDropzone from '../components/MyDropzone'
 import ReactDOM from "react-dom";
 
+
 const CATEGORIES = [
   { label: 'Fitnesss Rating', value: 'fitnessRating' },
   { label: 'Lodging', value: 'lodging' },
@@ -34,9 +35,28 @@ const CATEGORIES = [
       averageRating: 0,
       shipName: '',
       reviewBody: '',
+      shipImage: '',
     }
 
     handleInputChange = field => e => this.setState({ [field]: e.target.value })
+
+    fileSelectedHandler = event => this.setState({ shipImage: event.target.files[0] })
+
+    handleSubmitReview = async e => {
+      e.preventDefault();
+      const { shipName, averageRating, reviewBody, shipImage } = this.state;
+      const shipData = { shipName, shipImage };
+      const reviewData = { body: reviewBody, rating: averageRating };
+      const formData = new FormData();
+      Object.keys(shipData).forEach(key => formData.append(`ship[${key}]`, shipData[key]))
+      Object.keys(reviewData).forEach(key => formData.append(`review[${key}]`, reviewData[key]));
+      await axios.post(
+        'http://localhost:4000/reviews',
+        formData,
+        { headers: { 'content-type': 'multipart/form-data', Authorization: this.context.token } }
+      )
+    }
+
 
     handleRatingSelection = stateId => val => {
       const { categories } = this.state;
@@ -44,14 +64,6 @@ const CATEGORIES = [
       const ratings = Object.values(newCategories);
       const averageRating = Math.ceil(ratings.reduce((acc, rating) => acc + +rating, 0) / ratings.length);
       this.setState({ categories: newCategories, averageRating });
-    }
-
-    handleSubmitReview = async e => {
-      e.preventDefault();
-      const { shipName, averageRating, reviewBody } = this.state;
-      await axios.post('http://localhost:4000/reviews', { shipName, review: { body: reviewBody, rating: averageRating } }, { headers: { Authorization: this.context.token } })
-      
-
     }
 
     render(){
@@ -96,7 +108,7 @@ const CATEGORIES = [
           </div>
           <button onClick={this.handleSubmitReview}>Submit Review</button>
             <div className="review-dropzone">
-          <MyDropzone />
+          <MyDropzone fileSelectedHandler={this.fileSelectedHandler} />
           </div>
          </div>
     )

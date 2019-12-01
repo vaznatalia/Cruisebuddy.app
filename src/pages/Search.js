@@ -3,20 +3,27 @@ import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import StarRating from '../components/StarRating';
+import PropTypes from 'prop-types';
+import ReactPaginate from 'react-paginate';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/search.css";
 
 class Search extends Component {
-  state = { ships: [] }
+  state = { 
+         ships: [],
+         offset: 0
+
+        }
   componentDidMount() {
     this.fetchShips()
   }
   fetchShips = async () => {
     const { data } = await axios.get(
-      'http://localhost:4000/ships',
+      'http://localhost:4000/ships?_limit=5',
       { 'Content-Type': 'application/json', Authorization: sessionStorage.getItem('AUTH_TOKEN') }
     )
-    this.setState({ ships: this.filterShipsByTerm(data.ships) })
+    
+    this.setState({ ships: this.filterShipsByTerm(data.ships), pageCount: 5 })
   }
   filterShipsByTerm = ships => {
     const { match } = this.props;
