@@ -1,14 +1,16 @@
 import React from 'react';
 import axios from 'axios';
 import { get } from 'lodash';
-import Gallery from '../components/Gallery'
+import Gallery from '../components/Gallery';
+import StarRating from '../components/StarRating';
+
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import 'semantic-ui-css/semantic.min.css';
+
+
+import { Button, Comment, Form, Header, List, Container } from 'semantic-ui-react'
 import ReactDOM from "react-dom";
-import { Container, Header, List } from "semantic-ui-react";
-import "../styles/ship.css";
-
-
 
 
 class Ship extends React.Component {
@@ -86,25 +88,68 @@ class Ship extends React.Component {
             {/* <h1>{ get(ship.cruise_line, "name", "") }</h1> */}
        
             <div className="ship-description">{ get(ship, "description", "")}</div>
-              
-                <h1>Reviews</h1>
+
+            <div class="reviews-header">
+               <h2 class="ui header">Reviews</h2>
+            </div>
 
                                 {
                   ship.reviews && ship.reviews.map(review => {
                     return(
-                      <>
-                    <p>{review.rating}</p>
-                    <p>{review.body}</p>
-                  </>
+                      
+                      <div className="review-group-body">
+                    <Comment.Group className="review-group">
+                    <Comment className="comment-comment">
+    
+                    <Comment.Avatar className="comment-avatar" src='https://picsum.photos/200/300?random=1' />
+                    <Comment.Content className="comment-content">
+                    <Comment.Author className="comment-author" as='a'>{review.user_profile.first_name}</Comment.Author>
+                    <Comment.Metadata className="comment-metadata">
+                    <div>{review.user_profile.created_at}</div>
+                    </Comment.Metadata>
+
+                    <Comment.Text className="comment-text"> <StarRating className="stars-comments"value={review.rating} noHover /></Comment.Text>
+                    <Comment.Text className="review-body">{review.body}</Comment.Text>
+                    <p>Username: {review.user_profile.username}</p>
+                    <Comment.Actions>
+                    <Comment.Action className="review-reply">Reply</Comment.Action>
+                    </Comment.Actions>
+                    <Comment.Text><div className="comment-comments">COMMENTS:</div></Comment.Text>
+
+
+                    <div className="review-comments">
+                    {
+                      review.comments.map(comment => {
+                        return(
+                        <p>{comment.body}<span>- {comment.user_profile.first_name}</span></p>
+                        )
+                      })
+                    }
+                    </div>
+         
+                    </Comment.Content>
+
+                    </Comment>
+                
+
+                    </Comment.Group>
+
+
+                  </div>
                     )
                   })
                 }
                 
 
+              
+        </div>
+
+        
         </div>
 
 
-        </div>
+
+
 
 
       </>
