@@ -5,11 +5,9 @@ import Gallery from '../components/Gallery'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import { Description } from '../components/Description';
-
 import ReactDOM from "react-dom";
 import { Container, Header, List } from "semantic-ui-react";
 
-import CommentExample from "../components/CommentExample";
 
 
 class Ship extends React.Component {
@@ -106,8 +104,6 @@ class Ship extends React.Component {
 
 
         </div>
-
-
 
 
       </>
