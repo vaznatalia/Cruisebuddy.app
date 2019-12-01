@@ -6,7 +6,7 @@ const Card = props => {
   return (
     <div className="card text-center">
       <div className="overflow">
-        <img src={heroImage} alt="Image 1" className="card-img-top"/>
+        <img src={heroImage} alt="Ship" className="card-img-top"/>
       </div>
       <div className="card-body text-dark">
         <h4 className="card-title">Card Title</h4>
