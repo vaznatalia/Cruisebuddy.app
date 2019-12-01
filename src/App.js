@@ -11,24 +11,8 @@ import Search from "./pages/Search";
 import Ship from "./pages/Ship";
 import Footer from './components/Footer'
 import Review from './pages/Review'
-
-// import components
-
 import NavigationBar from './components/NavigationBar'
-//import {StarRating} from './components/StarRatingComponent'
-
-// import CSS
-
-import './styles/NavigationBar.css'
 import "./styles/global.css";
-import "./styles/home.css";
-import "./styles/search.css";
-import "./styles/ship.css";
-import "./styles/Review.css";
-import "./styles/MainPage.css";
-import "./styles/homemenu.css";
-import "./styles/commentgroup.css";
-
 
 
 class App extends Component {
