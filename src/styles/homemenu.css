@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?famiily=Open+Sans');
 
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -10,17 +13,17 @@
   font-size: 12px;
 }
 
-.home-search-box{
-  max-width: 600px;
-  min-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
+.home-input-group{
+ margin-top:300px;
+ width: 70%;
+ padding-left: 20rem;
+ 
 }
 
 .homebar{
   background: #2c3e50;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: -25px;
   max-width: 500px;
   min-width: 500px;
   height: 75px;
@@ -35,7 +38,9 @@
   justify-content: center;
 }
 
-
+.input-group-append{
+  margin-left:-30px;
+}
 
 .homebar ul{
   width: 780px;

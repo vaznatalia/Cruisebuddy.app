@@ -8,7 +8,6 @@ import MyDropzone from '../components/MyDropzone'
 import ReactDOM from "react-dom";
 
 
-
 const CATEGORIES = [
   { label: 'Fitnesss Rating', value: 'fitnessRating' },
   { label: 'Lodging', value: 'lodging' },

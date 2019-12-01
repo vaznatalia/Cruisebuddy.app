@@ -1,30 +1,28 @@
 import React, { Component } from "react";
 import { NavLink } from 'react-router-dom'
 
+
 class Footer extends Component {
 
    render() {
      return (
-        <div className="footer">
-           <div className="footer-content">
-              <div className="footer-section footer-about"></div>
-              <div className="footer-section footer-links"></div>
-              <div className="footer-section contact-form"></div>
-           </div>
+        
+      <footer className="rectangle">
+      <div>
+       <span className="cruisebuddy" href="#">Cruisebuddy</span>
 
+        <div className="main-footer"> 
+          <span>Terms of Use</span>
+         <span>Privacy Policy</span>
+         <span>FAQ</span>
+         <span>Help</span>
+         </div>
 
-           <div className="footer-bottom">
-            &copy; cruisebuddy.herokuapp.com 
-           </div>
-        </div>
- 
+      <span  className="copyright">  Copyright© Cruisebuddy,Inc.</span>
+     </div>
+     </footer>
      )
    }
  }
- 
- export default Footer;
-
-
-
-
+export default Footer
  
