@@ -29,21 +29,49 @@ import classNames from 'classnames';
     render(){
       const { averageRating } = this.state;
     const categories = [
-    {0.5: 'Useless'},
-    {1: 'Useless+'},
-    {1.5: 'Poor'},
-    {2: 'Poor+'},
-    {2.5: 'Ok'},
-    {3: 'Ok+'},
-    {3.5: 'Good'},
-    {4: 'Good+'},
-    {4.5: 'Excellent'},
-    {5: 'Excellent+'},
+      { label: 'Fitnesss Rating', value: 'fitnessRating' },
+      { label: 'Lodging', value: 'lodging' },
+      { label: 'Excursions', value: 'excursions' },
+      { label: 'Dining', value: 'dining' },
+      { label: 'Service', value: 'service' },
+      { label: 'Public Areas', value: 'publicAreas' },
+      { label: 'Value', value: 'value' },
+      { label: 'Entertainment', value: 'entertainmentRating'},
+    ]
+    
 
   return(
     <div>
+    <div className="reviews-img">
+
+      <h1>We’d love to hear your opinion. Your feedback helps 
+          fellow cruisers choose the best cruise for their needs.  
+          Thank you. </h1> 
     
-        <StarRating value={averageRating} />
+
+          <Form className="review-input">
+            <div controlId="formGrid">
+              <Form.Label>Witch ship were you on?</Form.Label>
+              <Form.Control placeholder="Begin typing your ship name…" />
+            </div>
+
+            <div controlId="formGrid">
+              <Form.Label>Which itinerary did you go on?</Form.Label>
+              <Form.Control placeholder="Itinerary" />
+            </div>
+            <div controlId="formGrid">
+              <Form.Label>On which dates did you cruise?</Form.Label>
+              <Form.Control type="date" placeholder="" />
+            </div>
+          </Form>
+
+
+        </div>
+        <div className="main-review-page">
+
+          <label>Choose Overal Rating</label>
+
+          <StarRating value={averageRating} />
            
             {categories.map(({ value, label }) => (
               <div>
@@ -53,8 +81,10 @@ import classNames from 'classnames';
               ))}
              </div>
              
-     
+         </div>
     )
     
-  
+  }
+
+}
 export default Review
