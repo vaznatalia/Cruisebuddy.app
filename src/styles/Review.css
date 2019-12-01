@@ -67,6 +67,10 @@ p {
 .star-rating label:hover ~ label {
   color: blue;
 }
+
+.noHover:hover {
+  color: #ccc; 
+}
 .c-2 {
   display: inline-grid;
   display: grid;

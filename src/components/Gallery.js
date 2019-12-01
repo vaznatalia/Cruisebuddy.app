@@ -13,6 +13,22 @@ const params = {
     disableOnInteraction: true
   },
   breakpoints: {
+    2720: {
+      slidesPerView: 7,
+      spaceBetween: 40
+    },   
+    2420: {
+      slidesPerView: 6,
+      spaceBetween: 40
+    },   
+    1920: {
+      slidesPerView: 5,
+      spaceBetween: 40
+    },   
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    },   
     1024: {
       slidesPerView: 3,
       spaceBetween: 40

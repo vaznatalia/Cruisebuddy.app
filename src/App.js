@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "semantic-ui-css/semantic.min.css";
+
+
+import { AuthContextProvider } from './context/AuthContext';
 
 // import pages
 import Home from "./pages/Home";
@@ -32,7 +36,7 @@ class App extends Component {
   render() {
     const { ships } = this.state;
     return (
-      <>
+      <AuthContextProvider>
         <BrowserRouter>
           <NavigationBar />
           <Switch>
@@ -43,7 +47,7 @@ class App extends Component {
             </Switch>
           <Footer/>
         </BrowserRouter>
-      </>
+      </AuthContextProvider>
     );
   }
 
