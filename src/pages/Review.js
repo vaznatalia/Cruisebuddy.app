@@ -6,8 +6,6 @@ import '../styles/Review.css'
 import StarRating from '../components/StarRating';
 import MyDropzone from '../components/MyDropzone'
 import ReactDOM from "react-dom";
-import { Container, Header, List } from "semantic-ui-react";
-
 
 const CATEGORIES = [
   { label: 'Fitnesss Rating', value: 'fitnessRating' },

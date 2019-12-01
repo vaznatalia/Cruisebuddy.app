@@ -2,18 +2,24 @@
 .reviews-img {
   background-image: url("../images/review-hero.jpg");
   box-sizing: border-box;
-  height: 777px;
+  height: 900px;
   width: 1440px;
   background-color: #ffffff;
   background-size: cover;
 }
 
+Form{
+  margin-left: 80px;
+
+}
+label{
+  padding: 1rem;
+}
 
 
-
-h1 {
+p{
   height: 108px;
-  width: 591px;
+  width: 800px;
   color: #101a1f;
   font-family: ".SF NS Display";
   font-size: 24px;
@@ -25,7 +31,7 @@ h1 {
 
  .main-review-page{
    padding: 100px; 
-   margin-left: 80px;
+   margin-left: 50px;
 
  }
 .review-input {

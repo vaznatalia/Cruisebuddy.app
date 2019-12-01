@@ -1,24 +1,30 @@
-.footer {
-  background: #303036;
-  color: #d3d3d3;
-  height: 400px;
-  position: absolute;
-  bottom: 0;
+.rectangle {
+  height: 230px;
+  width: 1440px;
+  background-color: #BFEBFF;
+  margin-top: 500px;
+  
 }
+  .cruisebuddy {
+  display: flex;
+  color: white;
+  font-family: "Raleway', sans-serif";
+  font-size: 20px;
+  padding: 30px;
+  margin-left: 60px;  
 
-.footer .footer-content {
-  border: 1px solid red;
-  height: 350px;
 }
-
-.footer .footer-bottom {
-  background: #343a40;
-  color: #686868;
-  height: 50px;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  padding-top: 20px;
-}
+  .copyright{
+    text-align: center;
+    color: #6C94A9;
+    font-family: ".SF NS Display";
+    font-size: 14px;
+    margin-left: 30rem;
+    padding: 20px;
+  
+    }
+    .main-footer{
+     justify-content: space-around;
+     display: flex; 
+     margin: 30px;
+    }
