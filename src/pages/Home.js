@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import NavigationBar from "../components/NavigationBar"
 import Footer from "../components/Footer"
 import Cards from '../components/Cards'
-
 import '../styles/home.css'
 
 class Home extends Component {

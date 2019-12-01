@@ -4,9 +4,9 @@ import { get } from 'lodash';
 import Gallery from '../components/Gallery'
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import { Description } from '../components/Description';
 import ReactDOM from "react-dom";
 import { Container, Header, List } from "semantic-ui-react";
+import "../styles/ship.css";
 
 
 
@@ -88,13 +88,23 @@ class Ship extends React.Component {
             <div className="ship-description">{ get(ship, "description", "")}</div>
               
                 <h1>Reviews</h1>
+
+                                {
+                  ship.reviews && ship.reviews.map(review => {
+                    return(
+                      <>
+                    <p>{review.rating}</p>
+                    <p>{review.body}</p>
+                  </>
+                    )
+                  })
+                }
                 
 
         </div>
 
 
         </div>
-
 
 
       </>
