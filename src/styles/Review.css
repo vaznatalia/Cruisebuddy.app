@@ -2,24 +2,31 @@
 .reviews-img {
   background-image: url("../images/review-hero.jpg");
   box-sizing: border-box;
-  height: 777px;
+  height: 900px;
   width: 1440px;
   background-color: #ffffff;
   background-size: cover;
 }
 
+Form{
+  margin-left: 80px;
 
 
+}
+label{
+  padding: 1rem;
+}
 
-h1 {
+p {
   height: 108px;
-  width: 591px;
-  color: #101a1f;
-  font-family: ".SF NS Display";
+  width: 800px;
+  color: white;
+  font-family: "";
   font-size: 24px;
   line-height: 36px;
-  padding: 80px;
-  margin-left: 80px;
+  padding: 120px;
+  margin-left: 50px;
+ 
 
 }
 
@@ -31,7 +38,7 @@ h1 {
 .review-input {
   width: 382px;
   height: 50px;
-  margin: none;
+
   padding: 60px;
 
 
@@ -62,20 +69,11 @@ h1 {
 }
 .c-2 {
   display: inline-grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 100px;  
+  display: grid;
+
  
   }
-  
-  .div11 { grid-area: 1 / 2 / 2 / 3; }
-  .div22 { grid-area: 1 / 1 / 2 / 2; }
-/* explanation */
 
-.form-group-{
-  width: 600px;
-
-}
 
 .active {
   color: blue !important;

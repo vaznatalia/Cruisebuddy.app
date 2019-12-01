@@ -2,7 +2,6 @@ import React from 'react'
 import '../styles/Review.css'
 import {Form } from 'react-bootstrap'
 import StarRating from '../components/StarRating';
-import classNames from 'classnames';
 import MyDropzone from '../components/MyDropzone'
 
 
@@ -29,7 +28,7 @@ import MyDropzone from '../components/MyDropzone'
     }
     render(){
       const { averageRating } = this.state;
-    const categories = [
+    const categories  = [
       { label: 'Fitnesss Rating', value: 'fitnessRating' },
       { label: 'Lodging', value: 'lodging' },
       { label: 'Excursions', value: 'excursions' },
@@ -38,21 +37,19 @@ import MyDropzone from '../components/MyDropzone'
       { label: 'Public Areas', value: 'publicAreas' },
       { label: 'Value', value: 'value' },
       { label: 'Entertainment', value: 'entertainmentRating'},
-    ]
     
-
+    ]
   return(
     <div>
     <div className="reviews-img">
 
-      <h1>We’d love to hear your opinion. Your feedback helps 
-          fellow cruisers choose the best cruise for their needs.  
-          Thank you. </h1> 
+      <p>We’d love to hear your opinion. Your feedback helps fellow cruisers choose the best cruise for their needs.  
+          Thank you. </p> 
     
-
+        <div className="form-area">
           <Form className="review-input">
             <div controlId="formGrid">
-              <Form.Label>Witch ship were you on?</Form.Label>
+              <label>Witch ship were you on?</label>
               <Form.Control placeholder="Begin typing your ship name…" />
             </div>
 
@@ -65,6 +62,7 @@ import MyDropzone from '../components/MyDropzone'
               <Form.Control type="date" placeholder="" />
             </div>
           </Form>
+          </div>
 
 
         </div>
@@ -76,12 +74,16 @@ import MyDropzone from '../components/MyDropzone'
            
             {categories.map(({ value, label }) => (
               <div>
+            
                 <label>{label}</label>
                 <StarRating category={value} value={this.state[value]} handleRating={this.handleRatingSelection(value)} />
-              </div>
+              
+                </div>
               ))}
+              
+              
          </div> 
-         <MyDropzone />
+         {/* <MyDropzone /> */}
          </div>
     )
     
