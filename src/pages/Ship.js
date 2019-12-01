@@ -10,6 +10,7 @@ import "../styles/ship.css";
 
 
 
+
 class Ship extends React.Component {
   state = {
     photoIndex: 0,

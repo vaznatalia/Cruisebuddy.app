@@ -23,99 +23,104 @@ class Home extends Component {
     return(
             <>
           <div  className="hero-div">
-          <div className="container">
-            <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-            <input type="text" className="form-control home-search-box" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search for Reviews" value={query} onChange={this.handleQueryChange} />
+          <div className="input-group mb-3 home-input-group" onSubmit={this.handleSubmit}>
+            
+            <input type="text" className="form-control"  placeholder="Search for Reviews"  aria-describedby="basic-addon2" value={query} onChange={this.handleQueryChange} />
+            <div className="input-group-append">
+              <button  className="btn btn-primary" type="button" onClick={this.handleSubmit}>Search</button>
+              </div>
+         
             </div>
-            </form>
           </div>
+          
+        
 
+      
           <div className="outermost">
-<div className="container">
-  <nav className="homebar">
-    <ul>
-      <li>Port
-        <div className="mega-menu">
+          <div className="container">
+          <nav className="homebar">
+          <ul>
+          <li>Port
+          <div className="mega-menu">
+            <div className="inner-mega-menu">
+              <p>Miami</p>
+              <p>Nassau</p>
+              <p></p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Port 4</p>
+              <p>Port 5</p>
+              <p>Port 6</p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Port 7</p>
+              <p>Port 8</p>
+              <p>Port 9</p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Port 10</p>
+              <p>Port 11</p>
+              <p>Port 12</p>
+            </div>
+          </div>
+          </li>
+          <li>Destination
+          <div className="mega-menu">
           <div className="inner-mega-menu">
-            <p>Port 1</p>
-            <p>Port 2</p>
-            <p>Port 3</p>
+              <p>Destination 1</p>
+              <p>Destination 2</p>
+              <p>Destination 3</p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Destination 4</p>
+              <p>Destination 5</p>
+              <p>Destination 6</p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Destination 7</p>
+              <p>Destination 8</p>
+              <p>Destination 9</p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Destination 10</p>
+              <p>Destination 11</p>
+              <p>Destination 12</p>
+            </div>
           </div>
+          </li>
+          <li>Cruiseline
+          <div className="mega-menu">
           <div className="inner-mega-menu">
-            <p>Port 4</p>
-            <p>Port 5</p>
-            <p>Port 6</p>
+              <p>Carnival</p>
+              <p>Royal Caribbean</p>
+              <p>Princess Cruises</p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Norwegian</p>
+              <p>Celebrity</p>
+              <p>MSC</p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Crystal</p>
+              <p>Holland</p>
+              <p>Disney</p>
+            </div>
+            <div className="inner-mega-menu">
+              <p>Oceania Cruises</p>
+              <p>Polar Cruises</p>
+              <p>Viking Ocean Cruises</p>
+            </div>
           </div>
-          <div className="inner-mega-menu">
-            <p>Port 7</p>
-            <p>Port 8</p>
-            <p>Port 9</p>
+          </li>
+          </ul>
+          </nav>
           </div>
-          <div className="inner-mega-menu">
-            <p>Port 10</p>
-            <p>Port 11</p>
-            <p>Port 12</p>
           </div>
-        </div>
-      </li>
-      <li>Destination
-        <div className="mega-menu">
-        <div className="inner-mega-menu">
-            <p>Destination 1</p>
-            <p>Destination 2</p>
-            <p>Destination 3</p>
-          </div>
-          <div className="inner-mega-menu">
-            <p>Destination 4</p>
-            <p>Destination 5</p>
-            <p>Destination 6</p>
-          </div>
-          <div className="inner-mega-menu">
-            <p>Destination 7</p>
-            <p>Destination 8</p>
-            <p>Destination 9</p>
-          </div>
-          <div className="inner-mega-menu">
-            <p>Destination 10</p>
-            <p>Destination 11</p>
-            <p>Destination 12</p>
-          </div>
-        </div>
-      </li>
-      <li>Cruiseline
-        <div className="mega-menu">
-        <div className="inner-mega-menu">
-            <p>Cruiseline 1</p>
-            <p>Cruiseline 2</p>
-            <p>Cruiseline 3</p>
-          </div>
-          <div className="inner-mega-menu">
-            <p>Cruiseline 4</p>
-            <p>Cruiseline 5</p>
-            <p>Cruiseline 6</p>
-          </div>
-          <div className="inner-mega-menu">
-            <p>Cruiseline 7</p>
-            <p>Cruiseline 8</p>
-            <p>Cruiseline 9</p>
-          </div>
-          <div className="inner-mega-menu">
-            <p>Cruiseline 10</p>
-            <p>Cruiseline 11</p>
-            <p>Cruiseline 12</p>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </nav>
-</div>
-</div>
 
 
 
   
-          </div>
+          
 
           <Cards/>
           </>

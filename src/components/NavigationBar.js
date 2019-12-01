@@ -11,9 +11,9 @@ class NavigationBar extends Component {
         <Navbar className="navbar navbar-dark" id="mainNav">
   <Nav class="container">
     <Navbar.Brand className="navbar-brand pt-0" href="#">Cruisebuddy</Navbar.Brand>
-       <Nav class="navbar-nav text-uppercase ml-auto mt-auto">
-        <Nav.Link className="nav-link nav-text-right mt-4 pt-3" >FIND A CRUISE</Nav.Link>
-          <Nav.Link className="nav-link nav-text-right mt-4 pt-3" href="#">LOGIN/REGISTER</Nav.Link>
+       <Nav class="navbar-nav  ml-auto mt-auto">
+        <Nav.Link className="nav-link nav-text-right mt-4 pt-3" >Find a Cruise</Nav.Link>
+          <Nav.Link className="nav-link nav-text-right mt-4 pt-3" href="#">Log in/Register</Nav.Link>
           <Nav.Link className="nav-link nav-text-right mt-4 pt-3" href="#">About</Nav.Link>
           <Nav.Link className="nav-link nav-text-right mt-4 pt-3" href="#">Team</Nav.Link>
           <Nav.Link className="nav-link nav-text-right mt-3 pt-0" href="/Review"><Button variant="outline-light btn-sm">Write a Review</Button></Nav.Link>
