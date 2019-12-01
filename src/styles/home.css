@@ -1,16 +1,15 @@
-.hero-div {
+.hero-img {
   text-align: center;
-  color: white;
-  background-image: url("../images/heroImage2.jpg");
+   background-image: url("../images/heroImage.jpg"); 
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: 50% 50%;
   background-size: cover;
-
-  height: 800px;
-  padding: 5rem;
-
+  opacity: 0.5;
+	height: 944px;
+	width: 1440px;
 }
+
 
 .container-fluid{
   background-color: #E3F3F9;

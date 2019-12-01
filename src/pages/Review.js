@@ -57,6 +57,32 @@ const CATEGORIES = [
     }
 
     render(){
+
+      const { averageRating } = this.state;
+    const categories  = [
+      { label: 'Fitnesss Rating', value: 'fitnessRating' },
+      { label: 'Lodging', value: 'lodging' },
+      { label: 'Excursions', value: 'excursions' },
+      { label: 'Dining', value: 'dining' },
+      { label: 'Service', value: 'service' },
+      { label: 'Public Areas', value: 'publicAreas' },
+      { label: 'Value', value: 'value' },
+      { label: 'Entertainment', value: 'entertainmentRating'},
+    
+    ]
+  return(
+    <div>
+    <div className="reviews-img">
+
+      <p>We’d love to hear your opinion. Your feedback helps fellow cruisers choose the best cruise for their needs.  
+          Thank you. </p> 
+    
+        <div className="form-area">
+          <Form className="review-input">
+            <div controlId="formGrid">
+              <label>Witch ship were you on?</label>
+              <Form.Control placeholder="Begin typing your ship name…" />
+
       const { averageRating, categories } = this.state;
 
   return(
@@ -69,6 +95,7 @@ const CATEGORIES = [
             <div controlId="formGrid">
               <Form.Label>Which ship were you on?</Form.Label>
               <Form.Control onChange={this.handleInputChange('shipName')} placeholder="Begin typing your ship name…" />
+
             </div>
             <div controlId="formGrid">
               <Form.Label>Which itinerary did you go on?</Form.Label>
@@ -79,17 +106,28 @@ const CATEGORIES = [
               <Form.Control type="date" placeholder="" />
             </div>
           </Form>
+
+          </div>
+
+
         </div>
         <div className="main-review-page">
           <label>Choose Overal Rating</label>
           <StarRating value={averageRating} />
             {CATEGORIES.map(({ value, label }) => (
               <div>
+            
                 <label>{label}</label>
-                <StarRating category={value} value={categories[value]} handleRating={this.handleRatingSelection(value)} />
-              </div>
+
+                <StarRating category={value} value={this.state[value]} handleRating={this.handleRatingSelection(value)} />
+              
+                </div>
+
               ))}
+              
+              
          </div> 
+
          <div className="revew-text-area">
          <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Example textarea</Form.Label>
@@ -100,6 +138,7 @@ const CATEGORIES = [
             <div className="review-dropzone">
           <MyDropzone />
           </div>
+
          </div>
     )
   }
