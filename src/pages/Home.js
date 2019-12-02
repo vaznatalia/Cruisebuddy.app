@@ -115,6 +115,7 @@ class Home extends Component {
           </nav>
           </div>
           </div>
+
             <div class="card-deck">
               <div class="card">
                 <img src="#" class="card-img-top" alt="..." />
@@ -141,6 +142,7 @@ class Home extends Component {
                 </div>
               </div>
             </div>
+
           </>
 
           

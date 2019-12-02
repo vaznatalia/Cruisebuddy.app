@@ -4,7 +4,7 @@ import '../styles/card-style.css'
 
 const Card = props => {
   return (
-    <div className="card text-center">
+    <div className="card text-center review-group-body">
       <div className="overflow">
         <img src={heroImage} alt="Ship" className="card-img-top"/>
       </div>

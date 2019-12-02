@@ -39,5 +39,19 @@ width: 100%;
   padding-top: 20px;
   padding-left: 20px;
   margin-right: auto;
-  margin-left: auto
+  margin-left: auto;
+}
+
+.ship-description-paragraph{
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 13px;
+}
+
+.ship-description-body{
+  background-color: #F5F5F5;
+  margin: 0px auto;
 }
