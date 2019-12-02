@@ -87,8 +87,8 @@ const CATEGORIES = [
           </Form>
         </div>
         <div className="m-r-p">
-          <h5>Choose Overal Rating</h5>
-          <StarRating />
+          <h4>Choose Overal Rating</h4>
+          <StarRating style={{height: '32px'}}  value={averageRating} />
           <h5>Rate item by item:</h5>
             {CATEGORIES.map(({ value, label }) => (
               

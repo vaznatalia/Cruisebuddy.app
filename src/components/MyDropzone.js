@@ -10,7 +10,7 @@ class MyDropzone extends Component {
         <div >
          
           <div >
-          <h5 style={{padding: '1rem', }}> Write your review</h5>
+          <h5 style={{padding: '1rem', }}> Write your review:</h5>
          <textarea style={{ width: '582px',
           height: '330px'}} 
         
@@ -27,7 +27,7 @@ class MyDropzone extends Component {
           <button  style={{display: 'none'}} class="btn btn-light">Upload</button>   
        
         </div>
-        <button  class="btn btn-primary" onClick={() => this.fileInput.click()} >Post    Review</button>
+        <button  class="btn btn-primary"  >Post    Review</button>
         </div>
       )
      }

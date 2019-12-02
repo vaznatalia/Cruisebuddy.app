@@ -32,7 +32,19 @@
 
 
 }
-
+h5{
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+.star-rating {
+  display:flex;
+  flex-direction: row-reverse;
+  font-size:1.5em;
+  justify-content:space-around;
+  padding:0 .2em;
+  text-align:center;
+  width:10em;
+}
 star-rating label 
 .s-r label:hover,
 .s-r label:hover ~ label {
@@ -61,7 +73,7 @@ star-rating label
   border: 1px solid #aaaaaa;
   padding: 200px;
   margin: 15px;
-  ;
+  
 }
 .child--fa-upload{
   align-self: flex-start;
