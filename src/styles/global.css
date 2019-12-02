@@ -66,11 +66,17 @@
 /* End Nav Bar */
 /* Begin Footer */
 .rectangle {
-  height: 230px;
+  bottom: 0;
+  height: 50px;
   width: 100%;
   background-color: #BFEBFF;
-  margin-top: 500px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
+
+
   .cruisebuddy {
   display: flex;
   color: white;
@@ -78,20 +84,18 @@
   font-size: 20px;
   padding: 30px;
   margin-left:150px;  
-  }
-  .copyright{
-    text-align: center;
-    color: #6C94A9;
-    font-family: ".SF NS Display";
-    font-size: 14px;
-    margin-left: 30rem;
-    padding: 20px;
-    }
-    .main-footer{
+}
+.copyright{
+  text-align: center;
+  color: #6C94A9;
+  font-family: ".SF NS Display";
+  font-size: 14px;
+}
+.main-footer{
      justify-content: space-around;
      display: flex; 
      margin: 30px;
      margin-left: 130px;
      width: 600px;
-    } 
+} 
 /* End Footer */

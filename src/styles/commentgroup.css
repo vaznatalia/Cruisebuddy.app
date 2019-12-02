@@ -1,5 +1,5 @@
 .review-group-body{
-  background-color: #F5F5F5;
+  background-color: #fff;
   font-size: 100%;
   color: #fff;
   font-family: Lato, Arial, sans-serif;
@@ -8,7 +8,7 @@
   margin: 0px auto;
   line-height: 1.5em;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .review-group{
@@ -18,7 +18,7 @@
   margin: 0px auto;
   padding: 1em 2em;
   color: #000;
-  background-color: #F7F6F7;
+  background-color: #fff;
   border: .07em solid rgba(0,0,0,.5);
   border-radius: .5em;
 }
@@ -42,16 +42,5 @@ width: 100%;
   margin-left: auto;
 }
 
-.ship-description-paragraph{
-  padding-right: 50px;
-  padding-top: 20px;
-  padding-left: 20px;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 13px;
-}
 
-.ship-description-body{
-  background-color: #F5F5F5;
-  margin: 0px auto;
-}
+

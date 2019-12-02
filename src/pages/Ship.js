@@ -8,10 +8,8 @@ import 'react-image-lightbox/style.css';
 import 'semantic-ui-css/semantic.min.css';
 import "../styles/ship.css";
 import "../styles/commentgroup.css";
+import { Comment, List } from 'semantic-ui-react'
 
-
-import { Button, Comment, Form, Header, List, Container } from 'semantic-ui-react'
-import ReactDOM from "react-dom";
 
 
 class Ship extends React.Component {
@@ -41,11 +39,17 @@ class Ship extends React.Component {
 
 
 
-
   render() {
     
     const { ship } = this.state;
-    console.log("this state", ship)
+    const allRatings  = ship.reviews && ship.reviews.map(review => {
+      return( 
+        review.rating
+        )
+      })
+    const ratingLength = allRatings && allRatings.length
+    const ratingSum = allRatings && allRatings.reduce((a, b) => a + b, 0)
+    const averageRating = ratingSum / ratingLength 
     const { ship_images = [] } = ship;
     const { photoIndex, isOpen } = this.state;
     const mainSrc = get(ship_images, [photoIndex, 'url'], '');
@@ -55,7 +59,6 @@ class Ship extends React.Component {
       <>
         <div className="carousel-wrapper">
           <Gallery key={ship_images.length} shipImages={ship_images} />
-
           <div className="button-wrapper ">
             <button type="button" className="btn btn-light" onClick={() => this.setState({ isOpen: true })}>
               View More
@@ -82,28 +85,46 @@ class Ship extends React.Component {
           )}
           </div>
         </div>
-        <div className="ship-rating">
-         
-        <div className="ship-description-body">
-          <div className="reviews-header">
-            <h1>{ get(ship.cruise_line, "name", "")} {ship.name}</h1>
-            {/* <h1>{ get(ship.cruise_line, "name", "") }</h1> */}
-          </div>        
-            <div className="ship-description-paragraph">{ get(ship, "description", "")}</div>
-
+        <div className="container">
+          <div className="ship-description-body">
+            <div className="reviews-header">
+              <h1>{ get(ship.cruise_line, "name", "")} {ship.name}</h1>
+            </div> 
+            <div className="ship-description-items">
+              <div className="ship-description-paragraph">
+              <div className="ship-rating-wrapper">
+                <div className="ship-rating-rating"><StarRating value={averageRating} noHover /> </div>
+                <div className="ship-rating-reviews"><p>{ship.reviews && ship.reviews.length} Reviews</p> </div>
+              </div>
+                <div className="ship-description-paragraph-text">{ get(ship, "description", "")}</div>
+              </div>
+              <div className="ship-voyages">
+                <div className="ship-voyages-title"><h2>Cruise Itineraries</h2></div>
+                <div className="ship-voyages-items">
+                <List>
+                  {ship.voyages && ship.voyages.slice(0, 4).map(voyage => {
+                    return( 
+                      <List.Item>
+                      <List.Header>{voyage.description}</List.Header><p>Ports:  {voyage.ports}</p>Price: ${voyage.price.toLocaleString()}
+                      </List.Item>
+                      )
+                    })
+                  }
+                </List>
+                </div>
+              </div>
+            </div>
+          </div>   
             <div className="reviews-header">
                <h2 className="ui header">Reviews</h2>
             </div>
-
-                                {
-                  ship.reviews && ship.reviews.map(review => {
-                    return(
-                      
-                      <div className="review-group-body">
+                {ship.reviews && ship.reviews.map(review => {
+                  return(
+                    <div className="review-group-body">
                     <Comment.Group className="review-group">
                     <Comment className="comment-comment">
     
-                    <Comment.Avatar className="comment-avatar" src='https://picsum.photos/200/300?random=1' />
+                    <Comment.Avatar className="comment-avatar" src={review.user_profile.url} />
                     <Comment.Content className="comment-content">
                     <Comment.Author className="comment-author" as='a'>{review.user_profile.first_name}</Comment.Author>
                     <Comment.Metadata className="comment-metadata">
@@ -130,30 +151,13 @@ class Ship extends React.Component {
                     </div>
          
                     </Comment.Content>
-
                     </Comment>
-                
-
                     </Comment.Group>
-
-
                   </div>
                     )
                   })
-                }
-                
-
-              
+                } 
         </div>
-
-        
-        </div>
-
-
-
-
-
-
       </>
     )
   }
