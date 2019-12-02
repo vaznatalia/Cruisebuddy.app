@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400i&display=swap');
-
 .navbar-brand {	
   height: 23px;	
   width: 111px;	
@@ -8,12 +7,7 @@
   font-style: italic;
   font-size: 20px;	
   line-height: 23px;}
-
-
-
   /* NAV BAR */
-
-
 .navbar {
   position: fixed;
   height: 60px;
@@ -25,13 +19,10 @@
   align-content: center;
   background-color: #064064;
 }
-
 .nav-text-right {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
-  
 }
-
 .navbar-r, .navbar-l {
   cursor: pointer;
   display: flex;
@@ -39,19 +30,16 @@
   color: white;
   align-items: center;
 }
-
 .navbar-l {
   width: 50px;
   position: relative;
 }
-
 .navbar-r {
   width: 200px;
   display: grid;
   justify-content: space-between;
   position: relative;
 }
-
 .logo {
   align-content: center;
   font-family: 'Raleway', sans-serif;
@@ -59,38 +47,29 @@
   text-decoration: none;
   color: white;
 }
-
 .logo:hover {
   text-decoration: none;
   color: #5dbcb2;
 }
-
 .logo:hover {
   text-decoration: none;
   color: #5dbcb2;
 }
-
-
 .navbar-icons {
   text-decoration: none;
   color: white;
 }
-
 .navbar-icons:hover {
   text-decoration: none;
   color: white;
 }
-
 /* End Nav Bar */
-
 /* Begin Footer */
-
 .rectangle {
   height: 230px;
   width: 100%;
   background-color: #BFEBFF;
   margin-top: 500px;
-
 }
   .cruisebuddy {
   display: flex;
@@ -107,7 +86,6 @@
     font-size: 14px;
     margin-left: 30rem;
     padding: 20px;
-
     }
     .main-footer{
      justify-content: space-around;
@@ -116,7 +94,4 @@
      margin-left: 130px;
      width: 600px;
     } 
-
-
-
 /* End Footer */

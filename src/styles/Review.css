@@ -1,5 +1,3 @@
-
-
 .r-img {
   background-image: url("../images/review-hero.jpg");
   box-sizing: border-box;
@@ -7,7 +5,6 @@
   width: 100%;
   background-size: cover;
 }
-
 .r-t {
   height: 200px;
   color: white;
@@ -16,21 +13,16 @@
   line-height: 36px;
   padding: 135px;
   margin-left: 80px;
-
 }
-
  .m-r-p{
    padding: 160px; 
    margin-left: 80px;
-
  }
 .r-input {
   width: 382px;
   height: 50px;
   padding: 60px;
   margin-left: ;
-
-
 }
 h5{
   margin-bottom: 2.5rem;
@@ -50,21 +42,16 @@ star-rating label
 .s-r label:hover ~ label {
   color: blue;
 }
-
 .star-rating label {
   color:#ccc;
   cursor:pointer;
 }
-
-
 .noHover:hover {
   color: #ccc; 
 }
-
 .active {
   color: blue !important;
 } 
-
 .box{
   display: flex;
   width: 582px;
@@ -73,7 +60,6 @@ star-rating label
   border: 1px solid #aaaaaa;
   padding: 200px;
   margin: 15px;
-  
 }
 .child--fa-upload{
   align-self: flex-start;
@@ -82,11 +68,9 @@ star-rating label
 /* .parent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
- 
   grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 0px;
 }
-
 .div1 { grid-area: 1 / 1 / 2 / 2; }
 .div2 { grid-area: 1 / 2 / 2 / 3; }
 .div3 { grid-area: 2 / 2 / 3 / 3; }
