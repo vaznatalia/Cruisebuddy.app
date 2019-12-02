@@ -11,9 +11,9 @@ const Card = props => {
       <div className="card-body text-dark">
         <h4 className="card-title">Card Title</h4>
         <p className="card-text text-secondary">
-          Lorem ipsum blah blah blah
+          Lsadnfkjasdfkjab
         </p>
-        <a href="#" className="btn btn-outline-success">Go Anywhere</a>
+        <a href="#" className="btn btn-outline-success">See Itineraries</a>
       </div>
     </div>
   )

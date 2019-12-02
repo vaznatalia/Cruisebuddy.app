@@ -2,10 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "semantic-ui-css/semantic.min.css";
-
 import { AuthContextProvider } from './context/AuthContext';
-
-// import pages
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
@@ -13,6 +10,8 @@ import Footer from './components/Footer'
 import Review from './pages/Review'
 import NavigationBar from './components/NavigationBar'
 import "./styles/global.css";
+
+
 
 
 class App extends Component {
