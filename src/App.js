@@ -1,45 +1,39 @@
-// import libraries
-
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-// import pages
+import "semantic-ui-css/semantic.min.css";
+import { AuthContextProvider } from './context/AuthContext';
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Ship from "./pages/Ship";
-import About from "./pages/About";
-
-import Ships from "./Ships";
-
-// import components
-import Navbar from "./components/Navbar";
-
-// import CSS
-
+import Footer from './components/Footer'
+import Review from './pages/Review'
+import NavigationBar from './components/NavigationBar'
 import "./styles/global.css";
-import "./styles/home.css";
-import "./styles/search.css";
-import "./styles/ship.css";
-import "./styles/about.css";
+
+
+
 
 class App extends Component {
+  state = { ship: []}
   render() {
+    const { ships } = this.state;
     return (
-      <>
+      <AuthContextProvider>
         <BrowserRouter>
-          <Navbar />
+          <NavigationBar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/search" component={Search} />
+            <Route exact path="/search/:searchTerm?" render={() => <Search ships={ships} />} />
             <Route path="/ship/:id" component={Ship} />
-            <Route exact path="/about" component={About} />
-          </Switch>
+            <Route exact path="/review" component={Review} />
+            </Switch>
+          <Footer/>
         </BrowserRouter>
-        <Ships />
-      </>
+      </AuthContextProvider>
     );
   }
+
 }
 
 export default App;
