@@ -67,11 +67,11 @@ const CATEGORIES = [
 
   return(
     <div>
-    <div className="reviews-img">
-      <p className="review-text">We'd love to hear your opinion. Your feedback helps 
+    <div className="r-img">
+      <p className="r-t">We'd love to hear your opinion. Your feedback helps 
           fellow cruisers choose the best cruise for their needs.  
           Thank you. </p> 
-          <Form  style={{marginLeft:'80px' }} className="review-input">
+          <Form  style={{marginLeft:'80px' }} className="r-input">
             <div controlId="formGrid">
               <Form.Label style={{ padding: '1rem'}} >Which ship were you on?</Form.Label>
               <Form.Control onChange={this.handleInputChange('shipName')} placeholder="Begin typing your ship name…" />
@@ -86,7 +86,7 @@ const CATEGORIES = [
             </div>
           </Form>
         </div>
-        <div className="main-review-page">
+        <div className="m-r-p">
           <h5>Choose Overal Rating</h5>
           <StarRating />
           <h5>Rate item by item:</h5>
