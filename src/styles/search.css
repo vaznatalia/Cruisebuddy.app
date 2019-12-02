@@ -40,6 +40,12 @@ button, input, optgroup, select, textarea {
   object-fit: cover;
 }
 
+.search-input-group{
+  padding-top: 100px;
+  margin: 0 auto;
+  max-width: 600px;
+  min-width: 300px;
+}
 
 .review-preview {
   text-overflow: ellipsis;
@@ -97,3 +103,6 @@ button, input, optgroup, select, textarea {
   color: black;
 }
 
+.search-page-container {
+  min-height: calc(100vh - 50px);
+}

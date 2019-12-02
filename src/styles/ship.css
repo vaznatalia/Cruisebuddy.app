@@ -22,7 +22,6 @@
 
 .ship-description-text {
     height: 500px;
-    width: 100%;
     border: none;
     overflow: auto;
     outline: none;
@@ -30,5 +29,43 @@
     -moz-box-shadow: none;
     box-shadow: none;
     resize: none; 
+}
 
+.ship-description-body {
+  background-color: #fff;
+  margin: 0px auto;
+}
+
+.ship-description-items {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding-bottom: 50px;
+  padding-right: 100px;
+}
+.ship-voyages {
+  padding-left: 40px;
+}
+
+.ship-description-paragraph {
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 13px;
+}
+
+
+.ship-voyages-title {
+  padding-bottom: 20px;
+}
+
+.ship-rating-wrapper {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.ship-rating-reviews {
+  padding-left: 10px;
 }

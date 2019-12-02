@@ -1,12 +1,11 @@
 import React, { Component } from "react"
-import NavigationBar from "../components/NavigationBar"
-import Footer from "../components/Footer"
-import Cards from '../components/Cards'
+import { Link } from 'react-router-dom';
 import '../styles/home.css'
 import "../styles/homemenu.css";
+import '../styles/card-style.css'
 
 class Home extends Component {
-  state = { query: '', destination: '', port: '' }
+  state = { query: ''}
   handleQueryChange = e => this.setState({ query: e.target.value })
   handleSubmit = e => {
     e.preventDefault();
@@ -20,7 +19,7 @@ class Home extends Component {
   }
   handleFilterChange = field => e => this.setState({ [field]: e.target.value })
   render(){
-    const { query, destination, port } = this.state;
+    const { query } = this.state;
     return(
             <>
           <div  className="hero-div">
@@ -31,117 +30,40 @@ class Home extends Component {
                 </div>
             </form>
           </div>
-          
-        
 
-      
-          <div className="outermost">
           <div className="container">
-          <nav className="homebar">
-          <ul>
-          <li>Port
-          <div className="mega-menu">
-            <div className="inner-mega-menu">
-              <p>Miami</p>
-              <p>Nassau</p>
-              <p></p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Port 4</p>
-              <p>Port 5</p>
-              <p>Port 6</p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Port 7</p>
-              <p>Port 8</p>
-              <p>Port 9</p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Port 10</p>
-              <p>Port 11</p>
-              <p>Port 12</p>
-            </div>
-          </div>
-          </li>
-          <li>Destination
-          <div className="mega-menu">
-          <div className="inner-mega-menu">
-              <p>Destination 1</p>
-              <p>Destination 2</p>
-              <p>Destination 3</p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Destination 4</p>
-              <p>Destination 5</p>
-              <p>Destination 6</p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Destination 7</p>
-              <p>Destination 8</p>
-              <p>Destination 9</p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Destination 10</p>
-              <p>Destination 11</p>
-              <p>Destination 12</p>
-            </div>
-          </div>
-          </li>
-          <li>Cruiseline
-          <div className="mega-menu">
-          <div className="inner-mega-menu">
-              <p>Carnival</p>
-              <p>Royal Caribbean</p>
-              <p>Princess Cruises</p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Norwegian</p>
-              <p>Celebrity</p>
-              <p>MSC</p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Crystal</p>
-              <p>Holland</p>
-              <p>Disney</p>
-            </div>
-            <div className="inner-mega-menu">
-              <p>Oceania Cruises</p>
-              <p>Polar Cruises</p>
-              <p>Viking Ocean Cruises</p>
-            </div>
-          </div>
-          </li>
-          </ul>
-          </nav>
-          </div>
-          </div>
-
-            <div class="card-deck">
-              <div class="card">
-                <img src="#" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+            <div className="deal-container">
+              <div className="home-deals">
+                <h2>Hot Deals!</h2>
               </div>
-              <div class="card">
-                <img src="#" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <div className="card-deck home-deck">
+                <div className="card home-deck-card">
+                  <img src="http://chunis.org/images/ships/breeze1.jpg" className="card-img-top" alt="Ship" />
+                  <div className="card-body">
+                    <h5 className="card-title">Carnival Breeze</h5>
+                    <p className="card-text">Carnival Horizon – which set sail in April 2018 – is one of the fleet's newer ships. It accommodates 1,450 crew members and a maximum of 5,101 passengers, and it offers a plethora of amenities for travelers of all ages. </p>
+                    <Link to={`/ship/3`}><button type="button" className="btn btn-light btn-sm">Read Reviews</button></Link>
+                  </div>
                 </div>
-              </div>
-              <div class="card">
-                <img src="#" class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div className="card home-deck-card">
+                  <img src="http://chunis.org/images/ships/symphonyoftheseas1.jpg" className="card-img-top" alt="Ship" />
+                  <div className="card-body">
+                    <h5 className="card-title">Symphony of the Seas</h5>
+                    <p className="card-text">The 6,680-passenger Symphony of the Seas is one of the newest ships in Royal Caribbean's Oasis fleet. This massive ship – which set sail in 2018 and it currently boasts being the largest cruise ship in the world. </p>
+                    <Link to={`/ship/8`}><button type="button" className="btn btn-light btn-sm">Read Reviews</button></Link>
+                  </div>
+                </div>
+                <div className="card home-deck-card">
+                  <img src="http://chunis.org/images/ships/disneydream1.jpg" className="card-img-top" alt="Ship" />
+                  <div className="card-body">
+                    <h5 className="card-title">Disney Dream</h5>
+                    <p className="card-text">Highlights include the 765-foot AquaDuck water coaster, a virtual sports simulator (for an extra fee) and theatrical performances that bring Disney animated favorites – like 'Beauty and the Beast' – to life.</p>
+                    <Link to={`/ship/14`}><button type="button" className="btn btn-light btn-sm">Read Reviews</button></Link>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
           </>
 
