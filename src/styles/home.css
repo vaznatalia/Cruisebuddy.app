@@ -6,7 +6,6 @@
   background-attachment: scroll;
   background-position: 50% 50%;
   background-size: cover;
-
   height: 800px;
   padding: 5rem;
 
@@ -20,3 +19,12 @@
   align-content: flex-end;
   margin-top: 60rem;
 }
+
+
+.home-input-group{
+  padding-top: 300px;
+  margin: 0 auto;
+  max-width: 600px;
+  min-width: 300px;
+  
+ }

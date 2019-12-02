@@ -4,10 +4,6 @@ import {Form } from 'react-bootstrap'
 import StarRating from '../components/StarRating';
 import classNames from 'classnames';
 
-
-
-
-
   class Review extends React.Component{
     state={
       fitnessRating : "1",
