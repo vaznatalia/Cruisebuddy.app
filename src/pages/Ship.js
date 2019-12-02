@@ -84,14 +84,15 @@ class Ship extends React.Component {
         </div>
         <div className="ship-rating">
          
-        <div>
+        <div className="ship-description-body">
+          <div className="reviews-header">
             <h1>{ get(ship.cruise_line, "name", "")} {ship.name}</h1>
             {/* <h1>{ get(ship.cruise_line, "name", "") }</h1> */}
-       
-            <div className="ship-description">{ get(ship, "description", "")}</div>
+          </div>        
+            <div className="ship-description-paragraph">{ get(ship, "description", "")}</div>
 
-            <div class="reviews-header">
-               <h2 class="ui header">Reviews</h2>
+            <div className="reviews-header">
+               <h2 className="ui header">Reviews</h2>
             </div>
 
                                 {

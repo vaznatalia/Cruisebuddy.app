@@ -1,6 +1,14 @@
-body {
-  background: radial-gradient(#e5e5e5, #ffff, #e5e5e5);
-  
+.review-group-body{
+  background-color: #F5F5F5;
+  font-size: 100%;
+  color: #fff;
+  font-family: Lato, Arial, sans-serif;
+  padding: 20px;
+  width: 100%;
+  margin: 0px auto;
+  line-height: 1.5em;
+  display: flex;
+  justify-content: center;
 }
 
 .card{
