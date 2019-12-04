@@ -3,13 +3,12 @@
   height: 23px;	
   width: 111px;	
   color: #000000;	
-  font-family: 'lato', sans-serif; 
   font-style: italic;
   font-size: 20px;	
   line-height: 23px;}
   /* NAV BAR */
 .navbar {
-  position: fixed;
+  position: relative;
   height: 60px;
   padding: 14px;
   top: 0px;
@@ -69,10 +68,12 @@
   bottom: 0;
   height: 50px;
   width: 100%;
-  background-color: #BFEBFF;
-  margin-top: 50px;
+  background-color: #064064;
+  
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
   justify-content: flex-end;
 }
 

@@ -48,9 +48,9 @@ class Search extends Component {
       <div className="search-page-container">
         <div className="search-container">
           <form className="input-group mb-3 search-input-group" onSubmit={this.handleSubmit}>
-            <input type="text" className="form-control"  placeholder="Search for Reviews"  aria-describedby="basic-addon2" value={query} onChange={this.handleQueryChange} />
+            <input style={{borderRadius: '50px 0 0 50px',backgroundColor:'#'}} type="text" className="form-control"  placeholder="Search for Reviews"  aria-describedby="basic-addon2" value={query} onChange={this.handleQueryChange} />
               <div className="input-group-append">
-                <button  className="btn btn-primary" type="button" onClick={this.handleSubmit}>Search</button>
+                <button  style={{borderRadius: ' 0 50px 50px 0'}} className="btn btn-primary" type="button" onClick={this.handleSubmit}><i class="fas fa-search"></i></button>
             </div>
           </form>
         </div>
